@@ -156,6 +156,7 @@ class Setting {
 	 */
 	public static function read() {
 		self::set_default_global_styles();
+		self::$data = apply_filters( 'blockart_default_settings', self::$data );
 		$settings   = get_option( '_blockart_settings', self::$data );
 		self::$data = blockart_parse_args( $settings, self::$data );
 		return self::$data;

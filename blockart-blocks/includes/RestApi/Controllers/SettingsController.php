@@ -132,13 +132,13 @@ class SettingsController extends \WP_REST_Controller {
 			'title'      => 'setting',
 			'type'       => 'object',
 			'properties' => array(
-				'rated'            => array(
+				'rated'  => array(
 					'type' => 'boolean',
 				),
-				'blocks'           => array(
-					'type'        => 'object',
-					'description' => __( 'Blocks', 'blockart' ),
-					'properties'  => array(
+				'blocks' => array(
+					'type'             => 'object',
+					'description'      => __( 'Blocks', 'blockart' ),
+					'properties'       => array(
 						'section'           => array(
 							'description' => __( 'Section block', 'blockart' ),
 							'type'        => 'boolean',
@@ -232,194 +232,194 @@ class SettingsController extends \WP_REST_Controller {
 							'type'        => 'boolean',
 						),
 						'faq'               => array(
-							'description' => __( 'FAQ block', 'blockart' ),
-              'type'        => 'boolean',
-						'icon'              => array(
-							'description' => __( 'Icon block', 'blockart' ),
-							'type'        => 'boolean',
-						),
-						'icon-list'         => array(
-							'description' => __( 'Icon list block', 'blockart' ),
-							'type'        => 'boolean',
-						),
-						'modal'             => array(
-							'description' => __( 'Modal block', 'blockart' ),
-							'type'        => 'boolean',
-						),
-						'imageComparison'             => array(
-							'description' => __( 'Image Comparison block', 'blockart' ),
-							'type'        => 'boolean',
-						),
-					),
-				),
-				'editor'           => array(
-					'type'        => 'object',
-					'description' => __( 'Editor Options', 'blockart' ),
-					'properties'  => array(
-						'section-width'          => array(
-							'type'        => 'integer',
-							'description' => __( 'Default section max width', 'blockart' ),
-						),
-						'editor-blocks-spacing'  => array(
-							'type'        => 'integer',
-							'description' => __( 'Spacing between blocks in the block editor', 'blockart' ),
-						),
-						'design-library'         => array(
-							'type'        => 'boolean',
-							'description' => __( 'Collection of pre-made blocks', 'blockart' ),
-						),
-						'responsive-breakpoints' => array(
-							'type'        => 'object',
-							'description' => __( 'Responsive breakpoints', 'blockart' ),
-							'properties'  => array(
-								'tablet' => array(
-									'type'        => 'integer',
-									'description' => __( 'Tablet breakpoint', 'blockart' ),
-								),
-								'mobile' => array(
-									'type'        => 'integer',
-									'description' => __( 'Mobile breakpoint', 'blockart' ),
-								),
+							'description'     => __( 'FAQ block', 'blockart' ),
+							'type'            => 'boolean',
+							'icon'            => array(
+								'description' => __( 'Icon block', 'blockart' ),
+								'type'        => 'boolean',
+							),
+							'icon-list'       => array(
+								'description' => __( 'Icon list block', 'blockart' ),
+								'type'        => 'boolean',
+							),
+							'modal'           => array(
+								'description' => __( 'Modal block', 'blockart' ),
+								'type'        => 'boolean',
+							),
+							'imageComparison' => array(
+								'description' => __( 'Image Comparison block', 'blockart' ),
+								'type'        => 'boolean',
 							),
 						),
-						'copy-paste-styles'      => array(
-							'type'        => 'boolean',
-							'description' => __( 'Copy paste style for blocks', 'blockart' ),
-						),
-						'auto-collapse-panels'   => array(
-							'type'        => 'boolean',
-							'description' => __( 'Panels behavior similar to accordion. Open one at a time', 'blockart' ),
+					),
+					'editor'           => array(
+						'type'        => 'object',
+						'description' => __( 'Editor Options', 'blockart' ),
+						'properties'  => array(
+							'section-width'          => array(
+								'type'        => 'integer',
+								'description' => __( 'Default section max width', 'blockart' ),
+							),
+							'editor-blocks-spacing'  => array(
+								'type'        => 'integer',
+								'description' => __( 'Spacing between blocks in the block editor', 'blockart' ),
+							),
+							'design-library'         => array(
+								'type'        => 'boolean',
+								'description' => __( 'Collection of pre-made blocks', 'blockart' ),
+							),
+							'responsive-breakpoints' => array(
+								'type'        => 'object',
+								'description' => __( 'Responsive breakpoints', 'blockart' ),
+								'properties'  => array(
+									'tablet' => array(
+										'type'        => 'integer',
+										'description' => __( 'Tablet breakpoint', 'blockart' ),
+									),
+									'mobile' => array(
+										'type'        => 'integer',
+										'description' => __( 'Mobile breakpoint', 'blockart' ),
+									),
+								),
+							),
+							'copy-paste-styles'      => array(
+								'type'        => 'boolean',
+								'description' => __( 'Copy paste style for blocks', 'blockart' ),
+							),
+							'auto-collapse-panels'   => array(
+								'type'        => 'boolean',
+								'description' => __( 'Panels behavior similar to accordion. Open one at a time', 'blockart' ),
+							),
 						),
 					),
-				),
-				'performance'      => array(
-					'type'        => 'object',
-					'description' => __( 'Performance', 'blockart' ),
-					'properties'  => array(
-						'local-google-fonts'        => array(
-							'type'        => 'boolean',
-							'description' => __( 'Load google fonts locally', 'blockart' ),
-						),
-						'preload-local-fonts'       => array(
-							'type'        => 'boolean',
-							'description' => __( 'Preload local fonts', 'blockart' ),
-						),
-						'allow-only-selected-fonts' => array(
-							'type'        => 'boolean',
-							'description' => __( 'Allow only selected fonts', 'blockart' ),
-						),
+					'performance'      => array(
+						'type'        => 'object',
+						'description' => __( 'Performance', 'blockart' ),
+						'properties'  => array(
+							'local-google-fonts'        => array(
+								'type'        => 'boolean',
+								'description' => __( 'Load google fonts locally', 'blockart' ),
+							),
+							'preload-local-fonts'       => array(
+								'type'        => 'boolean',
+								'description' => __( 'Preload local fonts', 'blockart' ),
+							),
+							'allow-only-selected-fonts' => array(
+								'type'        => 'boolean',
+								'description' => __( 'Allow only selected fonts', 'blockart' ),
+							),
 
-						'allowed-fonts'             => array(
-							'type'        => 'array',
-							'description' => __( 'Allowed fonts', 'blockart' ),
-							'items'       => array(
-								'type'       => 'object',
-								'properties' => array(
-									'id'           => array(
-										'type' => 'string',
-									),
-									'category'     => array(
-										'type' => 'string',
-									),
-									'defSubset'    => array(
-										'type' => 'string',
-									),
-									'family'       => array(
-										'type' => 'string',
-									),
-									'label'        => array(
-										'type' => 'string',
-									),
-									'value'        => array(
-										'type' => 'string',
-									),
-									'lastModified' => array(
-										'type' => 'string',
-									),
-									'popularity'   => array(
-										'type' => 'number',
-									),
-									'version'      => array(
-										'type' => 'string',
-									),
-									'subsets'      => array(
-										'type'  => 'array',
-										'items' => array(
+							'allowed-fonts'             => array(
+								'type'        => 'array',
+								'description' => __( 'Allowed fonts', 'blockart' ),
+								'items'       => array(
+									'type'       => 'object',
+									'properties' => array(
+										'id'           => array(
 											'type' => 'string',
 										),
-									),
-									'variants'     => array(
-										'type'  => 'array',
-										'items' => array(
+										'category'     => array(
 											'type' => 'string',
 										),
-									),
-								),
-							),
-						),
-					),
-				),
-				'asset-generation' => array(
-					'type'        => 'object',
-					'description' => __( 'Asset generation', 'blockart' ),
-					'properties'  => array(
-						'external-file' => array(
-							'type'        => 'boolean',
-							'description' => __( 'File generation', 'blockart' ),
-						),
-					),
-				),
-				'version-control'  => array(
-					'type'        => 'object',
-					'description' => __( 'Version control', 'blockart' ),
-					'properties'  => array(
-						'beta-tester' => array(
-							'type'        => 'boolean',
-							'description' => __( 'Beta tester', 'blockart' ),
-						),
-					),
-				),
-				'integrations'     => array(
-					'type'        => 'object',
-					'description' => __( 'Third party integrations', 'blockart' ),
-					'properties'  => array(
-						'google-maps-embed-api-key' => array(
-							'type'        => 'string',
-							'description' => __( 'Google maps embed api key', 'blockart' ),
-						),
-					),
-				),
-				'maintenance-mode' => array(
-					'type'        => 'object',
-					'description' => __( 'Maintenance mode', 'blockart' ),
-					'properties'  => array(
-						'maintenance-mode' => array(
-							'type'        => 'boolean',
-							'description' => __( 'Enable or disable maintenance mode', 'blockart' ),
-						),
-						'maintenance-page' => array(
-							'oneOf' => array(
-								array(
-									'type'        => 'object',
-									'description' => __( 'Maintenance mode page data.', 'blockart' ),
-									'properties'  => array(
-										'id'    => array(
+										'defSubset'    => array(
+											'type' => 'string',
+										),
+										'family'       => array(
+											'type' => 'string',
+										),
+										'label'        => array(
+											'type' => 'string',
+										),
+										'value'        => array(
+											'type' => 'string',
+										),
+										'lastModified' => array(
+											'type' => 'string',
+										),
+										'popularity'   => array(
 											'type' => 'number',
 										),
-										'title' => array(
+										'version'      => array(
 											'type' => 'string',
+										),
+										'subsets'      => array(
+											'type'  => 'array',
+											'items' => array(
+												'type' => 'string',
+											),
+										),
+										'variants'     => array(
+											'type'  => 'array',
+											'items' => array(
+												'type' => 'string',
+											),
 										),
 									),
 								),
-								array(
-									'type' => 'null',
+							),
+						),
+					),
+					'asset-generation' => array(
+						'type'        => 'object',
+						'description' => __( 'Asset generation', 'blockart' ),
+						'properties'  => array(
+							'external-file' => array(
+								'type'        => 'boolean',
+								'description' => __( 'File generation', 'blockart' ),
+							),
+						),
+					),
+					'version-control'  => array(
+						'type'        => 'object',
+						'description' => __( 'Version control', 'blockart' ),
+						'properties'  => array(
+							'beta-tester' => array(
+								'type'        => 'boolean',
+								'description' => __( 'Beta tester', 'blockart' ),
+							),
+						),
+					),
+					'integrations'     => array(
+						'type'        => 'object',
+						'description' => __( 'Third party integrations', 'blockart' ),
+						'properties'  => array(
+							'google-maps-embed-api-key' => array(
+								'type'        => 'string',
+								'description' => __( 'Google maps embed api key', 'blockart' ),
+							),
+						),
+					),
+					'maintenance-mode' => array(
+						'type'        => 'object',
+						'description' => __( 'Maintenance mode', 'blockart' ),
+						'properties'  => array(
+							'maintenance-mode' => array(
+								'type'        => 'boolean',
+								'description' => __( 'Enable or disable maintenance mode', 'blockart' ),
+							),
+							'maintenance-page' => array(
+								'oneOf' => array(
+									array(
+										'type'        => 'object',
+										'description' => __( 'Maintenance mode page data.', 'blockart' ),
+										'properties'  => array(
+											'id'    => array(
+												'type' => 'number',
+											),
+											'title' => array(
+												'type' => 'string',
+											),
+										),
+									),
+									array(
+										'type' => 'null',
+									),
 								),
 							),
 						),
 					),
 				),
 			),
-		),
 		);
 
 		return $this->add_additional_fields_schema( $schema );

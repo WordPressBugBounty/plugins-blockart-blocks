@@ -102,7 +102,7 @@ class WebFontLoader {
 	/**
 	 * Cleanup routine frequency.
 	 */
-	const CLEANUP_FREQUENCY = 'monthly';
+	const CLEANUP_FREQUENCY = 'weekly';
 
 	/**
 	 * Preload fonts flag.
@@ -131,7 +131,7 @@ class WebFontLoader {
 
 		// Add a cleanup routine.
 		$this->schedule_cleanup();
-		add_action( 'blockart_delete_fonts_folder', array( $this, 'blockart_delete_fonts_folder' ) );
+		add_action( 'blockart_delete_fonts_folder', array( $this, 'delete_fonts_folder' ) );
 	}
 
 	/**
@@ -180,7 +180,7 @@ class WebFontLoader {
 
 		$rule_sets = array_filter(
 			$css_doc->getAllRuleSets(),
-			function( $rule_set ) {
+			function ( $rule_set ) {
 				$rules = $rule_set->getRulesAssoc();
 				if ( isset( $rules['unicode-range'] ) && $rules['unicode-range'] instanceof \Sabberworm\CSS\Rule\Rule ) {
 					return false !== strpos( (string) $rules['unicode-range']->getValue(), 'U+0000-00FF' );
@@ -673,7 +673,7 @@ class WebFontLoader {
 	public function schedule_cleanup() {
 		if ( ! is_multisite() || ( is_multisite() && is_main_site() ) ) {
 			if ( ! wp_next_scheduled( 'blockart_delete_fonts_folder' ) && ! wp_installing() ) {
-				wp_schedule_event( time(), self::CLEANUP_FREQUENCY, 'delete_fonts_folder' );
+				wp_schedule_event( time(), self::CLEANUP_FREQUENCY, 'blockart_delete_fonts_folder' );
 			}
 		}
 	}

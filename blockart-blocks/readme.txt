@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -248,6 +248,17 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
+= 2.2.3 - 10-12-2024 =
+* Fix - Align Icon list item text with icon.
+* Fix - Clean routine frequency for cron job.
+* Fix - Opacity of the image in image block.
+* Fix - Timeline block line position.
+* Fix - Icon Block alignment issue.
+* Fix - Make slider block mobile responsive.
+* Fix - On change value for timeline description.
+* Added - Overlay option and blur effect in Column Block.
+* Added - Option to add the overlay hover background in Section Block.
+
 = 2.2.2 - 30-08-2024 =
 * Fix - Column block width option issue.
 * Fix - Paragraph block issue.

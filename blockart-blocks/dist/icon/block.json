@@ -50,7 +50,7 @@
             ]
         },
         "alignment": {
-            "type": "object",
+            "type": "string",
             "style": [
                 {
                     "selector": ".blockart-icon-block{{WRAPPER}} {text-align: {{VALUE}}; justify-content: {{VALUE}}; }"

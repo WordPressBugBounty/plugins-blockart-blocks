@@ -101,10 +101,6 @@
     },
     "arrowDistance": {
       "type": "object",
-      "default": {
-        "value": -36,
-        "unit": "px"
-      },
       "style": [
         {
           "selector": "{{WRAPPER}} .splide__arrows .splide__arrow--prev { left: {{VALUE}}; } {{WRAPPER}} .splide__arrows .splide__arrow--next { right: {{VALUE}}; }"

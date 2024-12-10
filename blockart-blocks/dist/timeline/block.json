@@ -3,7 +3,11 @@
   "name": "blockart/timeline",
   "title": "Timeline",
   "description": "Display Frequently Asked Titles as an accordion.",
-  "keywords": ["timeline", "accordion", "title"],
+  "keywords": [
+    "timeline",
+    "accordion",
+    "title"
+  ],
   "category": "blockart",
   "textdomain": "blockart",
   "supports": {
@@ -152,7 +156,7 @@
       },
       "style": [
         {
-          "selector": "{{WRAPPER}} ~ .blockart-timeline-line { width: {{VALUE}} !important; }"
+          "selector": "{{WRAPPER}} .blockart-timeline-line { width: {{VALUE}} !important; }"
         },
         {
           "selector": "{{WRAPPER}} .blockart-timeline-marker { border-width: {{VALUE}} !important; }"
@@ -358,7 +362,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} ~ .blockart-timeline-line, {{WRAPPER}} .blockart-timeline-marker { background: {{VALUE}};}"
+          "selector": "{{WRAPPER}} .blockart-timeline-line, {{WRAPPER}} .blockart-timeline-marker { background: {{VALUE}};}"
         }
       ]
     },
@@ -374,7 +378,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} ~ .blockart-timeline-line, {{WRAPPER}} .blockart-timeline-marker { background: {{VALUE}} !important; }"
+          "selector": "{{WRAPPER}} .blockart-timeline-line, {{WRAPPER}} .blockart-timeline-marker { background: {{VALUE}} !important; }"
         },
         {
           "selector": "{{WRAPPER}} .blockart-marker-layout-outline {border-color: {{VALUE}} !important;}"

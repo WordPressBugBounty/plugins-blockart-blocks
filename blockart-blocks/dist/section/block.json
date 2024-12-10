@@ -271,6 +271,25 @@
         }
       ]
     },
+    "overlayHoverBackground": {
+      "type": "object",
+      "default": {
+        "background": 1,
+        "color": "rgba(37, 99, 235,0.3)"
+      },
+      "style": [
+        {
+          "condition": [
+            {
+              "key": "overlay",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": "{{WRAPPER}} > .blockart-overlay:hover"
+        }
+      ]
+    },
     "blockMargin": {
       "type": "object",
       "default": {
