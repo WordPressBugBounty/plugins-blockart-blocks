@@ -46,6 +46,17 @@
       "type": "boolean",
       "default": false
     },
+    "horizontalAlignment": {
+      "type": "object",
+      "default": {
+        "desktop": ""
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} > [class*=\"blockart-container\"] > .blockart-section-inner{ justify-content: {{VALUE}}; }"
+        }
+      ]
+    },
     "verticalAlignment": {
       "type": "object",
       "default": {

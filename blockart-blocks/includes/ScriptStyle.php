@@ -327,8 +327,13 @@ class ScriptStyle {
 		global $pagenow;
 
 		$font_awesome_icons = Items::fromFile( Icon::FONT_AWESOME_ICONS_PATH );
-		$blockart_icons     = Items::fromFile( Icon::BLOCKART_ICONS_PATH );
+		$font_awesome_array = is_iterable( $font_awesome_icons ) ? iterator_to_array( $font_awesome_icons ) : [];
+
+		$blockart_icons = Items::fromFile( Icon::BLOCKART_ICONS_PATH );
+		$blockart_array = is_iterable( $blockart_icons ) ? iterator_to_array( $blockart_icons ) : [];
+
 		$google_fonts       = Items::fromFile( BLOCKART_PLUGIN_DIR . '/assets/json/google-fonts.json' );
+		$google_fonts_array = is_iterable( $google_fonts ) ? iterator_to_array( $google_fonts ) : [];
 
 		$localized_scripts = apply_filters(
 			'blockart_localize_block_scripts',
@@ -351,11 +356,11 @@ class ScriptStyle {
 					) + array(
 						'global-styles' => json_decode( blockart_get_setting( 'global-styles' ) ),
 					),
-					'googleFonts'     => iterator_to_array( $google_fonts ),
+					'googleFonts'     => $google_fonts_array,
 					'icons'           => array(
-						'font-awesome' => array_values( iterator_to_array( $font_awesome_icons ) ),
-						'blockart'     => array_values( iterator_to_array( $blockart_icons ) ),
-						'all'          => array_merge( iterator_to_array( $font_awesome_icons ), iterator_to_array( $blockart_icons ) ),
+						'font-awesome' => array_values( $font_awesome_array ),
+						'blockart'     => array_values( $blockart_array ),
+						'all'          => array_merge( $font_awesome_array, $blockart_array ),
 					),
 				),
 			)

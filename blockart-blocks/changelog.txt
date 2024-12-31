@@ -1,4 +1,9 @@
 == Changelog ==
+= 2.2.4 - 13-12-2024 =
+* Fix - Slider Control.
+* Fix - Refine iterator to array for icons.
+* Feature - Justify content option in Section block.
+
 = 2.2.3 - 10-12-2024 =
 * Fix - Align Icon list item text with icon.
 * Fix - Clean routine frequency for cron job.
