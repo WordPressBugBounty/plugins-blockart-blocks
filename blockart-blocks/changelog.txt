@@ -1,7 +1,11 @@
 == Changelog ==
+= 2.2.5 - 29-01-2025 =
+* Tweak - Update `Tested up to`.
+
 = 2.2.4 - 13-12-2024 =
 * Fix - Slider Control.
 * Fix - Refine iterator to array for icons.
+* Fix - Separators icon render update in Section block.
 * Feature - Justify content option in Section block.
 
 = 2.2.3 - 10-12-2024 =

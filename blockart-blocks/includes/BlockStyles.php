@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BlockStyles.
  *
@@ -16,6 +17,7 @@ defined( 'ABSPATH' ) || exit;
  * Class BlockStyles.
  */
 class BlockStyles extends Styles {
+
 
 	/**
 	 * Array of blocks data.
@@ -185,6 +187,7 @@ class BlockStyles extends Styles {
 					$this->generate_style_by_prop( $value, $styles_def, $attrs, $attrs_def, $wrapper_class )
 				);
 			}
+			$this->css = apply_filters( 'blockart_block_css', $this->css, $block, $this );
 		}
 		unset( $this->blocks );
 	}
@@ -729,7 +732,7 @@ class BlockStyles extends Styles {
 		return $css;
 	}
 
-		/**
+	/**
 	 * Generate style by prop.
 	 *
 	 * @param mixed  $value Setting value.
@@ -851,7 +854,7 @@ class BlockStyles extends Styles {
 					if ( is_array( $value[ $device ] ) ) {
 						if ( isset( $value[ $device ]['value'] ) ) {
 							$unit           = $value[ $device ]['unit'] ?? 'px';
-							$temp           = str_replace( '{{VALUE}}', "{$value[ $device ]['value']}$unit", $selector );
+							$temp           = str_replace( '{{VALUE}}', "{$value[$device]['value']}$unit", $selector );
 							$css[ $device ] = blockart_parse_args( $css[ $device ], $this->parse_css_string( $temp ) );
 						}
 					} else {
@@ -886,9 +889,9 @@ class BlockStyles extends Styles {
 	 * corresponding properties are stored as an array.
 	 */
 	protected function parse_css_string( string $css_string ): array {
-		$start = microtime( true );
-		$css   = array();
-		$rules = explode( '}', $css_string );
+		$css        = array();
+		$css_string = preg_replace( '/\/\*[\s\S]*?\*\//', '', $css_string );
+		$rules      = explode( '}', $css_string );
 		foreach ( $rules as $rule ) {
 			$parts = explode( '{', $rule, 2 );
 			if ( ! isset( $parts[1] ) ) {
@@ -951,7 +954,7 @@ class BlockStyles extends Styles {
 	 */
 	protected function get_attribute_def( $block_namespace ) {
 		$attribute_def = \WP_Block_Type_Registry::get_instance()
-		->get_all_registered()[ $block_namespace ]->attributes ?? false;
+			->get_all_registered()[ $block_namespace ]->attributes ?? false;
 
 		if ( $attribute_def && 'blockart/section' === $block_namespace ) {
 			$attribute_def['width']['default']['desktop']['value'] = blockart_get_setting( 'editor.section-width', 1170 );
@@ -966,8 +969,8 @@ class BlockStyles extends Styles {
 	 */
 	protected function get_saved_styles() {
 		return is_int( $this->id ) ?
-		get_post_meta( $this->id, '_blockart_blocks_css', true ) :
-		get_option( '_blockart_blocks_css', array() )[ $this->id ] ?? [];
+			get_post_meta( $this->id, '_blockart_blocks_css', true ) :
+			get_option( '_blockart_blocks_css', array() )[ $this->id ] ?? [];
 	}
 
 	/**

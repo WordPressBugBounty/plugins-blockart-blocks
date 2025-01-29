@@ -2,9 +2,9 @@
 Contributors: WPBlockArt
 Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -248,9 +248,13 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
-= 2.2.4 - 13-12-2024 =
+= 2.2.5 - 29-01-2025 =
+* Tweak - Update `Tested up to`.
+
+= 2.2.4 - 31-12-2024 =
 * Fix - Slider Control.
 * Fix - Refine iterator to array for icons.
+* Fix - Separators icon render update in Section block.
 * Feature - Justify content option in Section block.
 
 = 2.2.3 - 10-12-2024 =
