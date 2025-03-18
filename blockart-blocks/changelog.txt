@@ -1,4 +1,18 @@
 == Changelog ==
+= 2.2.6 - 18-03-2025 =
+* Fix - Position conflict for z-index property in heading block.
+* Fix - Slider gap.
+* Added - Option to add link in Social Share block.
+* Added - Button Link feature Style in Teams Block.
+* Added - New Query Loop Block.
+* Added - Options of color and typography on overlay header and figcaption of image block.
+* Added - Border option in question and answer style section of faq block
+* Added - Separator position and show separator on option in faq block
+* Added - FAQ items margin option in faq block
+* Added - Options of hover color on name and designation of Team block.
+* Fix - Image overflow issue on hover in Team Block
+* Added - Options of hover color, margin, padding and text alignment on overlay header and figcaption of image block
+
 = 2.2.5 - 29-01-2025 =
 * Tweak - Update `Tested up to`.
 

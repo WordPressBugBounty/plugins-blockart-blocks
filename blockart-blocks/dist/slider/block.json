@@ -145,12 +145,7 @@
       ]
     },
     "spaceBetween": {
-      "type": "object",
-      "style": [
-        {
-          "selector": "{{WRAPPER}} .splide__list {gap: {{VALUE}}; }"
-        }
-      ]
+      "type": "object"
     },
     "color": {
       "type": "object",
@@ -327,6 +322,57 @@
     },
     "className": {
       "type": "string"
+    },
+    "enableDisplayConditions": {
+      "type": "boolean",
+      "default": false
+    },
+    "userRoleConditions": {
+      "type": "array",
+      "default": [],
+      "style": [
+        {
+          "selector": "{{WRAPPER}}"
+        }
+      ]
+    },
+    "browserConditions": {
+      "type": "array",
+      "default": [],
+      "style": [
+        {
+          "selector": "{{WRAPPER}}"
+        }
+      ]
+    },
+    "osConditions": {
+      "type": "array",
+      "default": [],
+      "style": [
+        {
+          "selector": "{{WRAPPER}}"
+        }
+      ]
+    },
+    "selectedDays": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "style": [
+        {
+          "selector": "{{WRAPPER}}"
+        }
+      ]
+    },
+    "hideFromLoginUser": {
+      "type": "boolean",
+      "default": false
+    },
+    "hideFromLogoutUser": {
+      "type": "boolean",
+      "default": false
     }
   },
   "style": "blockart-blocks",

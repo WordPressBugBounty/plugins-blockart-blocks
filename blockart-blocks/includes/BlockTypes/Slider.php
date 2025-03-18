@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Slider block.
  *
@@ -13,6 +14,8 @@ defined( 'ABSPATH' ) || exit;
  * Buttons block.
  */
 class Slider extends AbstractBlock {
+
+
 
 	/**
 	 * Block name.
@@ -35,6 +38,7 @@ class Slider extends AbstractBlock {
 					'data-splide' => wp_json_encode(
 						array(
 							'perPage'      => $this->get_attribute( 'perPage', 1 ),
+							'perMove'      => $this->get_attribute( 'perMove', 1 ),
 							'autoplay'     => $this->get_attribute( 'autoplay', false ),
 							'pauseOnHover' => $this->get_attribute( 'pauseOnHover', false ),
 							'arrows'       => $this->get_attribute( 'arrows', true ),
@@ -42,8 +46,20 @@ class Slider extends AbstractBlock {
 							'speed'        => $this->get_attribute( 'speed', 800 ),
 							'rewindSpeed'  => $this->get_attribute( 'speed', 800 ),
 							'interval'     => $this->get_attribute( 'interval', 5000 ),
-							'perMove'      => $this->get_attribute( 'perMove', 1 ),
 							'type'         => $this->get_attribute( 'loop', false ) ? 'loop' : 'slide',
+							'gap'          => $this->get_attribute( 'spaceBetween', 10 )['value'] ?? 20,
+							'breakpoints'  => array(
+								'640'  => array(
+									'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 2 ),
+								),
+								'768'  => array(
+									'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 1 ),
+									'perMove' => max( 1, $this->get_attribute( 'perMove', 1 ) - 1 ),
+								),
+								'1024' => array(
+									'perPage' => $this->get_attribute( 'perPage', 1 ),
+								),
+							),
 						)
 					),
 				)

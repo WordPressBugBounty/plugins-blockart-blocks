@@ -368,6 +368,18 @@ function blockart_is_rest_request() {
 	return defined( 'REST_REQUEST' ) && REST_REQUEST;
 }
 
+/**
+ * Returns the query offset for particular query.
+ *
+ * @param [string] $query_id Query Id.
+ * @return int
+ */
+function blockart_get_query_page( $query_id ) {
+	$page = isset( $_GET[ 'bart_query_' . $query_id . '_page' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'bart_query_' . $query_id . '_page' ] ) ) : 1; // phpcs:ignore
+
+	return $page;
+}
+
 
 /**
  * Is rest request.

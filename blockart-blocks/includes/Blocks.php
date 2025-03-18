@@ -57,6 +57,8 @@ use BlockArt\BlockTypes\IconList;
 use BlockArt\BlockTypes\IconListItem;
 use BlockArt\BlockTypes\Icon;
 use BlockArt\BlockTypes\Modal;
+use BlockArt\BlockTypes\PostTemplate;
+use BlockArt\BlockTypes\QueryLoop;
 
 /**
  * BlockArt Blocks.
@@ -248,6 +250,8 @@ class Blocks {
 				PriceList::class,
 				PriceListChild::class,
 				Price::class,
+				QueryLoop::class,
+				PostTemplate::class,
 			)
 		);
 	}

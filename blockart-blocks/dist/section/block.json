@@ -24,7 +24,10 @@
   },
   "usesContext": [
     "clientId",
-    "query"
+    "blockart/queryId",
+    "query",
+    "queryArgs",
+    "queryContext"
   ],
   "attributes": {
     "clientId": {
@@ -266,8 +269,7 @@
     "overlayBackground": {
       "type": "object",
       "default": {
-        "background": 1,
-        "color": "rgba(37, 99, 235,0.3)"
+        "background": 1
       },
       "style": [
         {
@@ -285,8 +287,7 @@
     "overlayHoverBackground": {
       "type": "object",
       "default": {
-        "background": 1,
-        "color": "rgba(37, 99, 235,0.3)"
+        "background": 1
       },
       "style": [
         {

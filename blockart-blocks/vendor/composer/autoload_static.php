@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbd4937ad8502a84087df711a139e6776
+class ComposerStaticInit0fd0d6903efd0231f4c72d8900766eda
 {
     public static $files = array (
         '898f53366be040276e78507917363447' => __DIR__ . '/../..' . '/includes/Helpers/core.php',
@@ -84,10 +84,12 @@ class ComposerStaticInitbd4937ad8502a84087df711a139e6776
         'BlockArt\\BlockTypes\\Modal' => __DIR__ . '/../..' . '/includes/BlockTypes/Modal.php',
         'BlockArt\\BlockTypes\\Notice' => __DIR__ . '/../..' . '/includes/BlockTypes/Notice.php',
         'BlockArt\\BlockTypes\\Paragraph' => __DIR__ . '/../..' . '/includes/BlockTypes/Paragraph.php',
+        'BlockArt\\BlockTypes\\PostTemplate' => __DIR__ . '/../..' . '/includes/BlockTypes/PostTemplate.php',
         'BlockArt\\BlockTypes\\Price' => __DIR__ . '/../..' . '/includes/BlockTypes/Price.php',
         'BlockArt\\BlockTypes\\PriceList' => __DIR__ . '/../..' . '/includes/BlockTypes/PriceList.php',
         'BlockArt\\BlockTypes\\PriceListChild' => __DIR__ . '/../..' . '/includes/BlockTypes/PriceListChild.php',
         'BlockArt\\BlockTypes\\Progress' => __DIR__ . '/../..' . '/includes/BlockTypes/Progress.php',
+        'BlockArt\\BlockTypes\\QueryLoop' => __DIR__ . '/../..' . '/includes/BlockTypes/QueryLoop.php',
         'BlockArt\\BlockTypes\\Section' => __DIR__ . '/../..' . '/includes/BlockTypes/Section.php',
         'BlockArt\\BlockTypes\\Slide' => __DIR__ . '/../..' . '/includes/BlockTypes/Slide.php',
         'BlockArt\\BlockTypes\\Slider' => __DIR__ . '/../..' . '/includes/BlockTypes/Slider.php',
@@ -290,9 +292,9 @@ class ComposerStaticInitbd4937ad8502a84087df711a139e6776
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbd4937ad8502a84087df711a139e6776::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbd4937ad8502a84087df711a139e6776::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitbd4937ad8502a84087df711a139e6776::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0fd0d6903efd0231f4c72d8900766eda::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0fd0d6903efd0231f4c72d8900766eda::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit0fd0d6903efd0231f4c72d8900766eda::$classMap;
 
         }, null, ClassLoader::class);
     }

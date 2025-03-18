@@ -31,6 +31,69 @@
       "type": "string",
       "default": "Designation"
     },
+    "link": {
+      "type": "object"
+    },
+    "buttonEnable": {
+      "type": "boolean",
+      "default": false
+    },
+    "buttonIcon": {
+      "type": "string",
+      "default": "chevronRight"
+    },
+    "buttonPadding": {
+      "type": "object",
+      "default": {
+        "dimension": 1,
+        "desktop": {
+          "lock": true
+        }
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction .blockart-intro-wrapper.blockart-hover-effect .blockart-button{ padding: {{VALUE}}; }"
+        }
+      ]
+    },
+    "buttonColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction .blockart-intro-wrapper.blockart-hover-effect .blockart-button svg { fill: {{VALUE}} }"
+        }
+      ]
+    },
+    "hoverButtonColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction .blockart-intro-wrapper.blockart-hover-effect .blockart-button:hover svg { fill: {{VALUE}} }"
+        }
+      ]
+    },
+    "buttonBackground": {
+      "type": "object",
+      "default": {
+        "background": 1
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction .blockart-intro-wrapper.blockart-hover-effect .blockart-button"
+        }
+      ]
+    },
+    "hoverButtonBackground": {
+      "type": "object",
+      "default": {
+        "background": 1
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction .blockart-intro-wrapper.blockart-hover-effect .blockart-button:hover"
+        }
+      ]
+    },
     "imageEnable": {
       "type": "boolean",
       "default": true
@@ -173,11 +236,27 @@
         }
       ]
     },
+    "headingHoverColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction:hover .blockart-team-name .blockart-team-member-name { color: {{VALUE}} }"
+        }
+      ]
+    },
     "designationColor": {
       "type": "string",
       "style": [
         {
           "selector": "{{WRAPPER}} .blockart-team-designation p { color: {{VALUE}} }"
+        }
+      ]
+    },
+    "designationHoverColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-team-introduction:hover .blockart-team-designation p { color: {{VALUE}} }"
         }
       ]
     },

@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.2.5
+Stable tag: 2.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,13 +30,13 @@ Further, crafting stunning pages is effortless with a collection of 52 pre-built
 
 This Gutenberg plugin also offers an intuitive interface. Thus, it lets you easily import pre-built sections, starter packs, and templates.
 
-So, are you ready to elevate your website building journey to a new height with BlockArt Blocks - a powerful Gutenberg blocks plugin?  
+So, are you ready to elevate your website building journey to a new height with BlockArt Blocks - a powerful Gutenberg blocks plugin?
 
 https://www.youtube.com/watch?v=_aQoIIbcwmM
 
 ### 25+ CUSTOM GUTENBERG BLOCKS
 
-Choose from a diverse range of 29 flexible Gutenberg blocks. You can effortlessly toggle individual blocks on or off with the modular control.  
+Choose from a diverse range of 29 flexible Gutenberg blocks. You can effortlessly toggle individual blocks on or off with the modular control.
 
 * **Section:** Add rows and columns to your page to create layout variations. You can insert any other blocks of your choice into these columns and make your page unique.
 * **Heading:** Create stylish titles with various markups from H1 to H6.
@@ -68,8 +68,8 @@ Choose from a diverse range of 29 flexible Gutenberg blocks. You can effortlessl
 * **Price List:** Showcase product listings with a short description, price, and a button for each.
 
 ### READY-TO-USE WEBSITE DEMOS
-With BlockArt Blocks, you get multiple ready-to-import demo sections to enhance your website’s look. There are 52 different sections tailored for the following categories. 
-	
+With BlockArt Blocks, you get multiple ready-to-import demo sections to enhance your website’s look. There are 52 different sections tailored for the following categories.
+
 * Banner
 * CTA
 * Contact
@@ -95,7 +95,7 @@ In addition, you’ll find 24 distinct Gutenberg block templates designed for va
 * Work
 * Destination
 
-Further, if you're short on time, use seven pre-built starter packs containing all the necessary page templates to create a complete website swiftly. Currently, you can find starter packs for the following purposes. 
+Further, if you're short on time, use seven pre-built starter packs containing all the necessary page templates to create a complete website swiftly. Currently, you can find starter packs for the following purposes.
 
 * Freelancer
 * Product selling
@@ -105,8 +105,8 @@ Further, if you're short on time, use seven pre-built starter packs containing a
 * Wedding
 * Spa
 
-This is just the tip of the iceberg. There are additional starter demos in the pipeline catered to your needs for a faster and more effective website-building experience. 
-	
+This is just the tip of the iceberg. There are additional starter demos in the pipeline catered to your needs for a faster and more effective website-building experience.
+
 ### WHAT MAKES BLOCKART BLOCKS STAND OUT AS THE BEST GUTENBERG BLOCKS PLUGIN?
 
 BlockArt Blocks is a Gutenberg page builder plugin meticulously designed for effortless usage with a minimal to no learning curve.
@@ -117,8 +117,8 @@ In addition to providing essential custom blocks for Gutenberg, BlockArt Blocks 
 
 With an impressive library of BlockArt Blocks’ pre-built sections, templates, and starter packs, you can kick-start your page-building journey like a pro.
 
-* Ready-to-use templates designed by professional UI/UX designers 
-* Import the required templates with just a click  
+* Ready-to-use templates designed by professional UI/UX designers
+* Import the required templates with just a click
 * Real-time editing
 
 **Highly Customizable**
@@ -138,7 +138,7 @@ BlockArt Blocks is a lightweight and fast Gutenberg blocks plugin. Hence, you ca
 
 **Copy and Paste Styles**
 
-BlockArt Blocks allows you to copy and paste styles to various other blocks as required.  
+BlockArt Blocks allows you to copy and paste styles to various other blocks as required.
 
 * Copy styles that you’ve created previously and paste them anywhere else on the page/post
 
@@ -152,17 +152,17 @@ Incorporate the blocks anywhere, including the dashboard widget and customizer w
 
 BlockArt Blocks provides fully responsive blocks that allow you to maintain the beauty of your website on any device.
 
-* Adapts perfectly to different devices and screen sizes 
+* Adapts perfectly to different devices and screen sizes
 * Various setting options to control individual blocks’ width, size, type, height, and more
 
-### ADDITIONAL FEATURES OF BLOCKART BLOCKS 
-Here are some additional features offered by the best Gutenberg page builder plugin. 
+### ADDITIONAL FEATURES OF BLOCKART BLOCKS
+Here are some additional features offered by the best Gutenberg page builder plugin.
 
-* **Multiple Layout Possibilities**: Create dozens of different layouts for your website. With so many blocks, demos, and customization options, your creativity is the only limitation. 
+* **Multiple Layout Possibilities**: Create dozens of different layouts for your website. With so many blocks, demos, and customization options, your creativity is the only limitation.
 
-* **Customize Measurements with Four Units**: Change measurements for blocks with four types of measurements, i.e., px, rem, em, and percentage. 
+* **Customize Measurements with Four Units**: Change measurements for blocks with four types of measurements, i.e., px, rem, em, and percentage.
 
-* **Change the Colors of Blocks and Their Background**: Choose from a wide range of colors for the blocks and their background. You can choose colors to apply to regular and hover conditions. 
+* **Change the Colors of Blocks and Their Background**: Choose from a wide range of colors for the blocks and their background. You can choose colors to apply to regular and hover conditions.
 
 * **Enable Box Shadow**: Display shadows of blocks with different types of colors. You can also customize the shadow's length, blur, spread, and position.
 
@@ -176,11 +176,11 @@ Here are some additional features offered by the best Gutenberg page builder plu
 
 * **Maintenance Mode**: Enable the ‘Maintenance Mode’ if you temporarily take down your site or choose ‘Coming Soon’ for the pre-launch announcement.
 
-* **Option to Insert Additional CSS Classes**: Add CSS classes to the blocks for your personal touch. 
+* **Option to Insert Additional CSS Classes**: Add CSS classes to the blocks for your personal touch.
 
 ### BlockArt Blocks Compatibility with WordPress Themes
 
-BlockArt Blocks is compatible with all the themes built following WordPress standards. However, this Gutenberg block plugin works seamlessly with the following themes. 
+BlockArt Blocks is compatible with all the themes built following WordPress standards. However, this Gutenberg block plugin works seamlessly with the following themes.
 
 * [Zakra](https://zakratheme.com/)
 * [ColorMag](https://themegrill.com/themes/colormag/)
@@ -248,6 +248,20 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
+= 2.2.6 - 18-03-2025 =
+* Fix - Position conflict for z-index property in heading block.
+* Fix - Slider gap.
+* Added - Option to add link in Social Share block.
+* Added - Button Link feature Style in Teams Block.
+* Added - New Query Loop Block.
+* Added - Options of color and typography on overlay header and figcaption of image block.
+* Added - Border option in question and answer style section of faq block
+* Added - Separator position and show separator on option in faq block
+* Added - FAQ items margin option in faq block
+* Added - Options of hover color on name and designation of Team block.
+* Fix - Image overflow issue on hover in Team Block
+* Added - Options of hover color, margin, padding and text alignment on overlay header and figcaption of image block
+
 = 2.2.5 - 29-01-2025 =
 * Tweak - Update `Tested up to`.
 

@@ -29,11 +29,14 @@
     },
     "iconType": {
       "type": "object",
-      "default": "svg",
+      "default": "icon",
       "enum": [
-        "svg",
+        "icon",
         "image"
       ]
+    },
+    "link": {
+      "type": "object"
     },
     "icon": {
       "type": "string",

@@ -525,6 +525,14 @@
     },
     "className": {
       "type": "string"
+    },
+    "separatorPosition": {
+      "type": "string",
+      "default": "after-answer"
+    },
+    "showSeparatorOn": {
+      "type": "string",
+      "default": "always"
     }
   },
   "style": "blockart-blocks",
