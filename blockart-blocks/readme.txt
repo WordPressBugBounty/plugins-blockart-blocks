@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.2.6
+Stable tag: 2.2.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -248,6 +248,15 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
+= 2.2.7 - 24-03-2025 =
+* Added - Option to change icon color, size, opacity and rotation of items on icon list item Block.
+* Added - Item border option on icon list item Block.
+* Fix - Icon border color issue on icon list item block
+* Added - Option to add icon on overlay figcaption of image block
+* Added - Option to change icon color, position, size and gap on overlay figcaption of image block
+* Fix - Uploaded image not displaying in editor when editing in Team Block.
+* Fix - Flex issue in Section block.
+
 = 2.2.6 - 18-03-2025 =
 * Fix - Position conflict for z-index property in heading block.
 * Fix - Slider gap.

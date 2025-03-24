@@ -94,6 +94,10 @@
         }
       ]
     },
+    "image": {
+      "type": "object",
+      "default": {}
+    },
     "imageEnable": {
       "type": "boolean",
       "default": true

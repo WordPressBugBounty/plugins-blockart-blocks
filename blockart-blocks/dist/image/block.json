@@ -414,7 +414,7 @@
       },
       "style": [
         {
-          "selector": ".blockart-image{{WRAPPER}} .overlay-content figcaption {margin : {{VALUE}}; }"
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption {margin : {{VALUE}}; }"
         }
       ]
     },
@@ -453,6 +453,83 @@
     "imageFilter": {
       "type": "string",
       "default": "none"
+    },
+    "icon": {
+      "type": "object",
+      "default": {
+        "enable": false,
+        "icon": ""
+      }
+    },
+    "iconColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption .overlay-icon svg {fill: {{VALUE}}; }"
+        }
+      ]
+    },
+    "iconHoverColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption .overlay-icon:hover svg {fill: {{VALUE}}; }"
+        }
+      ]
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "iconSize": {
+      "type": "object",
+      "style": [
+        {
+          "condition": [
+            {
+              "key": "icon",
+              "relation": "!=",
+              "value": ""
+            }
+          ],
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption .overlay-icon svg { width: {{VALUE}}; height: auto; }"
+        }
+      ]
+    },
+    "iconGap": {
+      "type": "object",
+      "style": [
+        {
+          "condition": [
+            {
+              "key": "icon",
+              "relation": "!=",
+              "value": ""
+            },
+            {
+              "key": "iconPosition",
+              "relation": "==",
+              "value": "left"
+            }
+          ],
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption .overlay-icon { margin-right: {{VALUE}}; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "icon",
+              "relation": "!=",
+              "value": ""
+            },
+            {
+              "key": "iconPosition",
+              "relation": "==",
+              "value": "right"
+            }
+          ],
+          "selector": ".blockart-image{{WRAPPER}} .overlay-content .overlay-content-figcaption .overlay-icon { margin-left: {{VALUE}}; }"
+        }
+      ]
     }
   },
   "style": "blockart-blocks",
