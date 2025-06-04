@@ -2,9 +2,9 @@
 Contributors: WPBlockArt
 Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.2.7
+Stable tag: 2.2.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -248,6 +248,12 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
+= 2.2.8 - 04-06-2025 =
+* Added - Link Option to FAQ content.
+* Fix   - Responsive condition issue in modal block.
+* Fix   - Alignment issue in Info block.
+* Fix   - Replace top margin with bottom margin for dots in arrows and dots style settings of Slider block.
+
 = 2.2.7 - 24-03-2025 =
 * Added - Option to change icon color, size, opacity and rotation of items on icon list item Block.
 * Added - Item border option on icon list item Block.

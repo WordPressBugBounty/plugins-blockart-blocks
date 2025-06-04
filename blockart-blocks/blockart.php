@@ -4,7 +4,7 @@
  * Description: Craft your website beautifully using Gutenberg blocks like section/column, heading, button, etc. Unlimited possibilities of design with features like colors, backgrounds, typography, layouts, spacing, etc.
  * Author: WPBlockArt
  * Author URI: https://wpblockart.com/
- * Version: 2.2.7
+ * Version: 2.2.8
  * Requires at least: 5.5
  * Requires PHP: 7.4
  * Text Domain: blockart

@@ -111,7 +111,7 @@
       "type": "object",
       "style": [
         {
-          "selector": "{{WRAPPER}} .splide__pagination { top: {{VALUE}}; }"
+          "selector": "{{WRAPPER}} .splide__pagination { bottom: {{VALUE}} !important; }"
         }
       ]
     },

@@ -90,27 +90,32 @@ class Admin {
 	 */
 	private function get_submenus() {
 		$submenus = [
-			'dashboard' => [
+			'dashboard'   => [
 				'page_title' => __( 'Dashboard', 'blockart' ),
 				'menu_title' => __( 'Dashboard', 'blockart' ),
 				'position'   => 10,
 			],
-			'blocks'    => [
+			'blocks'      => [
 				'page_title' => __( 'Blocks', 'blockart' ),
 				'menu_title' => __( 'Blocks', 'blockart' ),
 				'position'   => 20,
 			],
-			'products'  => [
+			'products'    => [
 				'page_title' => __( 'Products', 'blockart' ),
 				'menu_title' => __( 'Products', 'blockart' ),
 				'position'   => 30,
 			],
-			'settings'  => [
+			'settings'    => [
 				'page_title' => __( 'Settings', 'blockart' ),
 				'menu_title' => __( 'Settings', 'blockart' ),
 				'position'   => 40,
 			],
-			'help'      => [
+			'free-vs-pro' => [
+				'page_title' => __( 'Free Vs Pro', 'magazine-blocks' ),
+				'menu_title' => __( 'Free Vs Pro', 'magazine-blocks' ),
+				'position'   => 45,
+			],
+			'help'        => [
 				'page_title' => __( 'Help', 'blockart' ),
 				'menu_title' => __( 'Help', 'blockart' ),
 				'position'   => 50,

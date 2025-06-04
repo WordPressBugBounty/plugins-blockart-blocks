@@ -1,4 +1,10 @@
 == Changelog ==
+= 2.2.8 - 04-06-2025 =
+* Added - Link Option to FAQ content.
+* Fix   - Responsive condition issue in modal block.
+* Fix   - Alignment issue in Info block.
+* Fix   - Replace top margin with bottom margin for dots in arrows and dots style settings of Slider block.
+
 = 2.2.7 - 24-03-2025 =
 * Added - Option to change icon color, size, opacity and rotation of items on icon list item Block.
 * Added - Item border option on icon list item Block.

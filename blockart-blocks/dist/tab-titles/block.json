@@ -249,6 +249,34 @@
         }
       ]
     },
+    "blockMargin": {
+      "type": "object",
+      "default": {
+        "dimension": 1,
+        "desktop": {
+          "lock": true
+        }
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-tabs-trigger { margin: {{VALUE}}; }"
+        }
+      ]
+    },
+    "blockPadding": {
+      "type": "object",
+      "default": {
+        "dimension": 1,
+        "desktop": {
+          "lock": true
+        }
+      },
+      "style": [
+        {
+          "selector": "{{WRAPPER}} .blockart-tabs-trigger { padding: {{VALUE}}; }"
+        }
+      ]
+    },
     "cssID": {
       "type": "string"
     },

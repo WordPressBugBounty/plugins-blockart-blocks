@@ -3,7 +3,10 @@
   "name": "blockart/modal",
   "title": "Modal",
   "description": "Add Popup Modal on click.",
-  "keywords": ["modal", "popup"],
+  "keywords": [
+    "modal",
+    "popup"
+  ],
   "category": "blockart",
   "textdomain": "blockart",
   "supports": {
@@ -306,6 +309,30 @@
       "style": [
         {
           "selector": "{{WRAPPER}} .blockart-modal-trigger .blockart-button-link"
+        }
+      ]
+    },
+    "hideOnDesktop": {
+      "type": "boolean",
+      "style": [
+        {
+          "selector": "@media (min-width:62em) { {{WRAPPER}} { display: none; } }"
+        }
+      ]
+    },
+    "hideOnTablet": {
+      "type": "boolean",
+      "style": [
+        {
+          "selector": "@media (min-width:48em) and (max-width:62em) { {{WRAPPER}} { display: none; } }"
+        }
+      ]
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "style": [
+        {
+          "selector": "@media (max-width:48em) { {{WRAPPER}} { display: none; } }"
         }
       ]
     }
