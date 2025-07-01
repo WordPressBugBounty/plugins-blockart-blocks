@@ -1,4 +1,9 @@
 == Changelog ==
+= 2.2.9 - 01-07-2025 =
+* Added - Link Option to Timeline Block.
+* Fix - Make links clickable on Tab Block.
+* Fix - Url Input field width overflow.
+
 = 2.2.8 - 04-06-2025 =
 * Added - Link Option to FAQ content.
 * Fix   - Responsive condition issue in modal block.

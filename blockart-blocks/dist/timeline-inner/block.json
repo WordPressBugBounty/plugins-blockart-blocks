@@ -70,7 +70,12 @@
 			"default": "div"
 		},
 		"link": {
-			"type": "object"
+			"type": "object",
+			"default": {
+				"url": "",
+				"newTab": false,
+				"nofollow": false
+			}
 		},
 		"text": {
 			"type": "string"

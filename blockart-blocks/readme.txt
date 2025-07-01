@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.2.8
+Stable tag: 2.2.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -248,6 +248,11 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
 == Changelog ==
+= 2.2.9 - 01-07-2025 =
+* Added - Link Option to Timeline Block.
+* Fix - Make links clickable on Tab Block.
+* Fix - Url Input field width overflow.
+
 = 2.2.8 - 04-06-2025 =
 * Added - Link Option to FAQ content.
 * Fix   - Responsive condition issue in modal block.
