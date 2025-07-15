@@ -20,12 +20,12 @@
             'dev_requirement' => false,
         ),
         'halaxa/json-machine' => array(
-            'pretty_version' => '1.2.3',
-            'version' => '1.2.3.0',
+            'pretty_version' => '1.2.5',
+            'version' => '1.2.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../halaxa/json-machine',
             'aliases' => array(),
-            'reference' => '58fb6e97c53c3341bb1f3685b8bdbeedf3f9616c',
+            'reference' => 'd0f84abf79ac98145d478b66d2bcf363d706477c',
             'dev_requirement' => false,
         ),
         'roundcube/plugin-installer' => array(
@@ -35,12 +35,12 @@
             ),
         ),
         'sabberworm/php-css-parser' => array(
-            'pretty_version' => 'v8.8.0',
-            'version' => '8.8.0.0',
+            'pretty_version' => 'v8.9.0',
+            'version' => '8.9.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
             'aliases' => array(),
-            'reference' => '3de493bdddfd1f051249af725c7e0d2c38fed740',
+            'reference' => 'd8e916507b88e389e26d4ab03c904a082aa66bb9',
             'dev_requirement' => false,
         ),
         'shama/baton' => array(

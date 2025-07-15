@@ -99,7 +99,7 @@ class LibraryDataController extends \WP_REST_Controller {
 	 * @return array
 	 */
 	protected function prepare_items_for_response( $data, $request ) {
-		$categorizer = function( $data_to_categorize ) {
+		$categorizer = function ( $data_to_categorize ) {
 			$result = array();
 			foreach ( $data_to_categorize as $item ) {
 				if ( ! empty( $item['children'] ) ) {
@@ -138,7 +138,8 @@ class LibraryDataController extends \WP_REST_Controller {
 	 * Fetch library data.
 	 *
 	 * @param boolean $force
-	 * @return array
+	 *
+	 * @return \WP_Error
 	 */
 	protected function fetch( $force = false ) {
 		if ( $force ) {
@@ -165,8 +166,20 @@ class LibraryDataController extends \WP_REST_Controller {
 
 			$data = wp_remote_retrieve_body( $response );
 			$data = json_decode( $data, true );
-
-			set_transient( '_blockart_library_data', $data, WEEK_IN_SECONDS );
+			if (
+				is_array( $data ) &&
+				isset( $data['sections'], $data['templates'] ) &&
+				is_array( $data['sections'] ) &&
+				is_array( $data['templates'] )
+			) {
+				set_transient( '_blockart_library_data', $data, WEEK_IN_SECONDS );
+			} else {
+				return new \WP_Error(
+					'invalid_data',
+					esc_html__( 'Invalid data received from the library.', 'blockart' ),
+					array( 'status' => 500 )
+				);
+			}
 		}
 
 		return $data;

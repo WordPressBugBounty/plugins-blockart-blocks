@@ -47,9 +47,10 @@ class Update {
 		if ( version_compare( $old_version, '2.0.9', '<' ) ) {
 			$this->update_to_2_0_9();
 		}
-		if ( version_compare( $old_version, '2.1.0', '<' ) ) {
-			$this->update_to_2_1_0();
+		if ( version_compare( $old_version, '2.2.10', '<' ) ) {
+			$this->update_to_2_2_10();
 		}
+
 	}
 
 	/**
@@ -115,6 +116,15 @@ class Update {
 	 * @return void
 	 */
 	private function update_to_2_1_0() {
+		delete_transient( '_blockart_library_data' );
+	}
+
+	/**
+	 * Update to 2.2.10.
+	 *
+	 * @return void
+	 */
+	private function update_to_2_2_10() {
 		delete_transient( '_blockart_library_data' );
 	}
 }

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf
+class ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1
 {
     public static $files = array (
         'ace6d88241f812b4accb2d847454aef6' => __DIR__ . '/..' . '/halaxa/json-machine/src/functions.php',
@@ -254,6 +254,7 @@ class ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf
         'JsonMachine\\Tokens' => __DIR__ . '/..' . '/halaxa/json-machine/src/Tokens.php',
         'JsonMachine\\TokensWithDebugging' => __DIR__ . '/..' . '/halaxa/json-machine/src/TokensWithDebugging.php',
         'JsonMachine\\ValidJsonPointers' => __DIR__ . '/..' . '/halaxa/json-machine/src/ValidJsonPointers.php',
+        'Sabberworm\\CSS\\CSSElement' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSElement.php',
         'Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
         'Sabberworm\\CSS\\CSSList\\CSSBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php',
         'Sabberworm\\CSS\\CSSList\\CSSList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSList.php',
@@ -270,6 +271,8 @@ class ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf
         'Sabberworm\\CSS\\Parsing\\SourceException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/SourceException.php',
         'Sabberworm\\CSS\\Parsing\\UnexpectedEOFException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php',
         'Sabberworm\\CSS\\Parsing\\UnexpectedTokenException' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php',
+        'Sabberworm\\CSS\\Position\\Position' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Position/Position.php',
+        'Sabberworm\\CSS\\Position\\Positionable' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Position/Positionable.php',
         'Sabberworm\\CSS\\Property\\AtRule' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/AtRule.php',
         'Sabberworm\\CSS\\Property\\CSSNamespace' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/CSSNamespace.php',
         'Sabberworm\\CSS\\Property\\Charset' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/Property/Charset.php',
@@ -299,9 +302,9 @@ class ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit995ba1463eb3e341a332e70ce1584dcf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$classMap;
 
         }, null, ClassLoader::class);
     }

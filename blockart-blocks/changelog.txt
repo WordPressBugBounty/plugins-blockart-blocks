@@ -1,4 +1,7 @@
 == Changelog ==
+= 2.2.10 - 15-07-2025 =
+* Fix - PHP Error.
+
 = 2.2.9 - 01-07-2025 =
 * Added - Link Option to Timeline Block.
 * Fix - Make links clickable on Tab Block.
