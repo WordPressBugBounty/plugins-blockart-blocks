@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1
+class ComposerStaticInit6114372ef4fa9f385741148b0c3da741
 {
     public static $files = array (
         'ace6d88241f812b4accb2d847454aef6' => __DIR__ . '/..' . '/halaxa/json-machine/src/functions.php',
@@ -302,9 +302,9 @@ class ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6e4a9e677d578210d8453abf61d2bef1::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$classMap;
 
         }, null, ClassLoader::class);
     }

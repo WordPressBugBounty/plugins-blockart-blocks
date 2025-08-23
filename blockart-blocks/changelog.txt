@@ -1,4 +1,7 @@
 == Changelog ==
+= 2.2.11 - 23-08-2025 =
+* Update - Block settings turned on in the dashboard.
+
 = 2.2.10 - 15-07-2025 =
 * Fix - PHP Error.
 
