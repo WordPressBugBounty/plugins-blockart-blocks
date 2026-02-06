@@ -1,10 +1,10 @@
 === BlockArt Blocks – Gutenberg Blocks, Page Builder Blocks ,WordPress Block Plugin, Sections & Template Library  ===
 Contributors: WPBlockArt
 Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
-Requires at least: 5.5 
-Tested up to: 6.8
+Requires at least: 5.5
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.2.11
+Stable tag: 2.2.15
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -247,7 +247,24 @@ Absolutely Yes! BlockArt has been created using the Gutenberg editor. Hence, it 
 
 BlockArt Library is a collection of Sections, Starter Packs, and Templates that you can import to create a page/post.
 
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the BlockArt Blocks plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/9e5fbf7d-b1bc-412a-bb90-cea5402a81ec). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 == Changelog ==
+
+= 2.2.15 - 29-01-2026 =
+* Fix 	 - Sanitization and escaping of the counter block.
+
+= 2.2.14 - 28-11-2025 =
+* Fix 	 - Sanitization and escaping of the timestamp in frontend.
+
+= 2.2.13 - 04-11-2025 =
+* Update - Readme text.
+
+= 2.2.12 - 15-10-2025 =
+* Added - Show default theme color pallet on color picker.
+
 = 2.2.11 - 23-08-2025 =
 * Update - Block settings turned on in the dashboard.
 

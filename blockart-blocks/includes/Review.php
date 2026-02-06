@@ -58,14 +58,14 @@ class Review {
 				</svg>
 			</div>
 			<div class="blockart-notice-content">
-				<h3 class="blockart-notice-title"><?php esc_html_e( 'HAKUNA MATATA!', 'blockart' ); ?></h3>
+				<h3 class="blockart-notice-title"><?php esc_html_e( 'HAKUNA MATATA!', 'blockart-blocks' ); ?></h3>
 				<p class="blockart-notice-description">
 					<?php
 					printf(
 						/* Translators: 1: Plugin name, 2: Benefit, 3: Break tag, 4: Smile icon */
 						esc_html__(
 							'Hope you are having nice experience with %1$s plugin. Please provide this plugin a nice review. %2$s %3$s Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the plugin without any issues and also to provide free support like we have been doing. %4$s',
-							'blockart'
+							'blockart-blocks'
 						),
 						'<strong>BlockArt Blocks</strong>',
 						'<br>',
@@ -77,11 +77,11 @@ class Review {
 				<p class="blockart-notice-actions">
 					<a href="https://wordpress.org/support/plugin/blockart-blocks/reviews?rate=5#new-post" target="_blank" rel="noopener noreferrer" class="button button-primary blockart-leave-review">
 						<span class="dashicons dashicons-external"></span>
-						<?php esc_html_e( 'Sure, I\'d love to!', 'blockart' ); ?>
+						<?php esc_html_e( 'Sure, I\'d love to!', 'blockart-blocks' ); ?>
 					</a>
-					<a href="#" class="button button-secondary blockart-remind-me-later"><span  class="dashicons dashicons-smiley"></span><?php esc_html_e( 'Remind me later', 'blockart' ); ?></a>
-					<a href="#" class="button button-secondary blockart-reviewed-already"><span class="dashicons dashicons-dismiss"></span><?php esc_html_e( 'I already did', 'blockart' ); ?></a>
-					<a href="https://wpblockart.com/contact/" class="button button-secondary blockart-have-query" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-testimonial"></span><?php esc_html_e( 'I have a query', 'blockart' ); ?></a>
+					<a href="#" class="button button-secondary blockart-remind-me-later"><span  class="dashicons dashicons-smiley"></span><?php esc_html_e( 'Remind me later', 'blockart-blocks' ); ?></a>
+					<a href="#" class="button button-secondary blockart-reviewed-already"><span class="dashicons dashicons-dismiss"></span><?php esc_html_e( 'I already did', 'blockart-blocks' ); ?></a>
+					<a href="https://wpblockart.com/contact/" class="button button-secondary blockart-have-query" target="_blank" rel="noopener noreferrer"><span class="dashicons dashicons-testimonial"></span><?php esc_html_e( 'I have a query', 'blockart-blocks' ); ?></a>
 				</p>
 			</div>
 		</div>

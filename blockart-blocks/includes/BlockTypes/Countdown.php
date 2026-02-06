@@ -37,6 +37,10 @@ class Countdown extends AbstractBlock {
 				array_values( $calculated_time ),
 				$content
 			);
+
+			$timestamp = sanitize_text_field( $timestamp );
+			$timestamp = esc_attr( $timestamp );
+
 			$content         = preg_replace( '/<div/', "<div data-expiry-timestamp='{$timestamp}' ", $content, 1 );
 		}
 		return $content;

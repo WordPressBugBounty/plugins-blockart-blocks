@@ -106,6 +106,8 @@ class Blocks {
 	 * @since 1.0.0
 	 */
 	private function init_hooks() {
+		global $pagenow;
+
 		$block_categories_hook   = version_compare( get_bloginfo( 'version' ), '5.8', '>=' ) ?
 			'block_categories_all' :
 			'block_categories';
@@ -125,6 +127,33 @@ class Blocks {
 		add_action( 'save_post', array( $this, 'maybe_clear_block_styles' ), 10, 2 );
 		add_action( 'delete_post', array( $this, 'maybe_clear_block_styles' ), 10, 2 );
 		add_action( 'blockart_responsive_breakpoints_changed', array( $this, 'regenerate_block_styles' ) );
+
+		if ( 'customize.php' !== $pagenow ) {
+			add_action(
+				'enqueue_block_editor_assets',
+				function () {
+					$palette = get_theme_support( 'editor-color-palette' );
+
+					if ( empty( $palette ) ) {
+						return;
+					}
+
+					$styles = sprintf(
+						':root{%s}',
+						array_reduce(
+							current( $palette ),
+							function ( $acc, $curr ) {
+								$acc .= "--{$curr['slug']}: {$curr['color']};\n";
+								return $acc;
+							},
+							''
+						)
+					);
+
+					wp_add_inline_style( 'wp-block-library', $styles );
+				}
+			);
+		}
 	}
 
 	/**
@@ -167,7 +196,7 @@ class Blocks {
 	 * @return void
 	 */
 	public function enqueue_blocks_styles() {
-		$fonts = [];
+		$fonts = array();
 
 		if ( ! blockart_is_block_theme() ) {
 			$this->prepared_widget_blocks = blockart_process_blocks( $this->prepared_widget_blocks );
@@ -268,7 +297,7 @@ class Blocks {
 			array(
 				array(
 					'slug'  => 'blockart',
-					'title' => esc_html__( 'BlockArt', 'blockart' ),
+					'title' => esc_html__( 'BlockArt', 'blockart-blocks' ),
 				),
 			),
 			$block_categories

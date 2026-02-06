@@ -65,7 +65,7 @@ class LibraryDataController extends \WP_REST_Controller {
 		if ( ! current_user_can( 'edit_posts' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+				esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}
@@ -111,7 +111,7 @@ class LibraryDataController extends \WP_REST_Controller {
 					);
 				}
 				$item['slug'] = $item['post_name'];
-				foreach ( $item['category'] ?? [] as $cat ) {
+				foreach ( $item['category'] ?? array() as $cat ) {
 					if ( isset( $result[ $cat['slug'] ] ) ) {
 						++$result[ $cat['slug'] ]['count'];
 						$result[ $cat['slug'] ]['items'][] = $item;
@@ -159,7 +159,7 @@ class LibraryDataController extends \WP_REST_Controller {
 			if ( is_wp_error( $response ) || 200 !== (int) wp_remote_retrieve_response_code( $response ) ) {
 				return new \WP_Error(
 					'rest_forbidden',
-					esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+					esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 					array( 'status' => rest_authorization_required_code() )
 				);
 			}
@@ -176,7 +176,7 @@ class LibraryDataController extends \WP_REST_Controller {
 			} else {
 				return new \WP_Error(
 					'invalid_data',
-					esc_html__( 'Invalid data received from the library.', 'blockart' ),
+					esc_html__( 'Invalid data received from the library.', 'blockart-blocks' ),
 					array( 'status' => 500 )
 				);
 			}

@@ -164,7 +164,7 @@ class ScriptStyle {
 				'deps'    => array_merge(
 					array( 'blockart-frontend-common' ),
 					'map' === $view_script ? array( 'blockart-google-maps' ) : array(),
-					'image-gallery' === $view_script ? [ 'swiper' ] : [],
+					'image-gallery' === $view_script ? array( 'swiper' ) : array(),
 					'image-comparison' === $view_script ? array( 'blockart-dics' ) : array()
 				),
 				'version' => BLOCKART_VERSION,
@@ -199,7 +199,7 @@ class ScriptStyle {
 	 * @return void
 	 */
 	public function register_scripts() {
-		wp_register_script( 'swiper', plugins_url( '/assets/lib/swiper/swiper-bundle.min.js', BLOCKART_PLUGIN_FILE ), [], '11.0.7', true );
+		wp_register_script( 'swiper', plugins_url( '/assets/lib/swiper/swiper-bundle.min.js', BLOCKART_PLUGIN_FILE ), array(), '11.0.7', true );
 		foreach ( $this->scripts as $handle => $script ) {
 			if ( empty( $script['callback'] ) ) {
 				wp_register_script( "blockart-$handle", $script['src'], $script['deps'], $script['version'], true );
@@ -207,7 +207,7 @@ class ScriptStyle {
 				wp_register_script( "blockart-$handle", $script['src'], $script['deps'], $script['version'], true );
 			}
 			if ( isset( $script['i18n'] ) && $script['i18n'] ) {
-				wp_set_script_translations( "blockart-$handle", 'blockart', BLOCKART_LANGUAGES );
+				wp_set_script_translations( "blockart-$handle", 'blockart-blocks', BLOCKART_LANGUAGES );
 			}
 		}
 	}
@@ -327,13 +327,13 @@ class ScriptStyle {
 		global $pagenow;
 
 		$font_awesome_icons = Items::fromFile( Icon::FONT_AWESOME_ICONS_PATH );
-		$font_awesome_array = is_iterable( $font_awesome_icons ) ? iterator_to_array( $font_awesome_icons ) : [];
+		$font_awesome_array = is_iterable( $font_awesome_icons ) ? iterator_to_array( $font_awesome_icons ) : array();
 
 		$blockart_icons = Items::fromFile( Icon::BLOCKART_ICONS_PATH );
-		$blockart_array = is_iterable( $blockart_icons ) ? iterator_to_array( $blockart_icons ) : [];
+		$blockart_array = is_iterable( $blockart_icons ) ? iterator_to_array( $blockart_icons ) : array();
 
 		$google_fonts       = Items::fromFile( BLOCKART_PLUGIN_DIR . '/assets/json/google-fonts.json' );
-		$google_fonts_array = is_iterable( $google_fonts ) ? iterator_to_array( $google_fonts ) : [];
+		$google_fonts_array = is_iterable( $google_fonts ) ? iterator_to_array( $google_fonts ) : array();
 
 		$localized_scripts = apply_filters(
 			'blockart_localize_block_scripts',

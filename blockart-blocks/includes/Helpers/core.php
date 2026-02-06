@@ -6,6 +6,9 @@
  * @package BlockArt
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Get the direct filesystem object.
  *
@@ -268,8 +271,8 @@ function blockart_get_widget_blocks() {
  * @return array
  */
 function blockart_get_allowed_svg_elements() {
-	return [
-		'svg'     => [
+	return array(
+		'svg'     => array(
 			'class'           => true,
 			'xmlns'           => true,
 			'width'           => true,
@@ -283,34 +286,34 @@ function blockart_get_allowed_svg_elements() {
 			'stroke-width'    => true,
 			'stroke-linecap'  => true,
 			'stroke-linejoin' => true,
-		],
-		'g'       => [ 'fill' => true ],
-		'title'   => [ 'title' => true ],
-		'path'    => [
+		),
+		'g'       => array( 'fill' => true ),
+		'title'   => array( 'title' => true ),
+		'path'    => array(
 			'fill'      => true,
 			'fill-rule' => true,
 			'd'         => true,
 			'transform' => true,
-		],
-		'circle'  => [
+		),
+		'circle'  => array(
 			'cx' => true,
 			'cy' => true,
 			'r'  => true,
-		],
-		'polygon' => [
+		),
+		'polygon' => array(
 			'fill'      => true,
 			'fill-rule' => true,
 			'points'    => true,
 			'transform' => true,
 			'focusable' => true,
-		],
-		'line'    => [
+		),
+		'line'    => array(
 			'x1' => true,
 			'y1' => true,
 			'x2' => true,
 			'y2' => true,
-		],
-	];
+		),
+	);
 }
 
 /**
@@ -350,7 +353,7 @@ function blockart_build_html_attrs( $attributes = array(), $echo_attributes = fa
 			if ( $echo_attributes ) {
 				echo ' ' . esc_attr( $key ) . '="' . call_user_func_array( $esc_func, [ $value ] ) . '"' . ( $length === $index + 1 ? ' ' : '' ); // phpcs:ignore -- see: L:348
 			} else {
-				$attrs .= ' ' . esc_attr( $key ) . '="' . call_user_func_array( $esc_func, [ $value ] ) . '"' . ( $length === $index + 1 ? ' ' : '' );
+				$attrs .= ' ' . esc_attr( $key ) . '="' . call_user_func_array( $esc_func, array( $value ) ) . '"' . ( $length === $index + 1 ? ' ' : '' );
 			}
 		}
 		++$index;

@@ -5,6 +5,9 @@
  * @package BlockArt
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Determine whether the given value is array accessible.
  *
@@ -37,14 +40,14 @@ function blockart_array_add( array $array_value, string $key, $value ): array {
  * @return array
  */
 function blockart_array_collapse( $array_value ) {
-	$results = [];
+	$results = array();
 	foreach ( $array_value as $values ) {
 		if ( ! is_array( $values ) ) {
 			continue;
 		}
 		$results[] = $values;
 	}
-	return array_merge( [], ...$results );
+	return array_merge( array(), ...$results );
 }
 
 /**
@@ -54,9 +57,9 @@ function blockart_array_collapse( $array_value ) {
  */
 function blockart_array_cross_join(): array {
 	$arrays  = func_get_args();
-	$results = [ [] ];
+	$results = array( array() );
 	foreach ( $arrays as $index => $array ) {
-		$append = [];
+		$append = array();
 		foreach ( $results as $result ) {
 			foreach ( $array as $item ) {
 				$result[ $index ] = $item;
@@ -76,7 +79,7 @@ function blockart_array_cross_join(): array {
  * @return array
  */
 function blockart_array_divide( array $array_value ) {
-	return [ array_keys( $array_value ), array_values( $array_value ) ];
+	return array( array_keys( $array_value ), array_values( $array_value ) );
 }
 
 /**
@@ -87,7 +90,7 @@ function blockart_array_divide( array $array_value ) {
  * @return array
  */
 function blockart_array_dot( $array_value, $prepend = '' ) {
-	$results = [];
+	$results = array();
 	foreach ( $array_value as $key => $value ) {
 		if ( is_array( $value ) && ! empty( $value ) ) {
 			$results = array_merge( $results, blockart_array_dot( $value, $prepend . $key . '.' ) );
@@ -110,7 +113,7 @@ function blockart_array_dot( $array_value, $prepend = '' ) {
  * @return array The converted nested array
  */
 function blockart_array_undot( $array_value ) {
-	$results = [];
+	$results = array();
 	foreach ( $array_value as $key => $value ) {
 		blockart_array_set( $results, $key, $value );
 	}
@@ -191,7 +194,7 @@ function blockart_array_last( array $array_value, callable $callback = null, $de
  * @return array
  */
 function blockart_array_flatten( $array_value, $depth = INF ): array {
-	$result = [];
+	$result = array();
 	foreach ( $array_value as $item ) {
 		if ( ! is_array( $item ) ) {
 			$result[] = $item;
@@ -281,7 +284,7 @@ function blockart_array_get( $array_value, $key, $default_value = null ) {
  */
 function blockart_array_has( $array_value, $keys ): bool {
 	$keys = (array) $keys;
-	if ( ! $array_value || [] === $keys ) {
+	if ( ! $array_value || array() === $keys ) {
 		return false;
 	}
 	foreach ( $keys as $key ) {
@@ -315,7 +318,7 @@ function blockart_array_has_any( $array_value, $keys ): bool {
 	if ( ! $array_value ) {
 		return false;
 	}
-	if ( [] === $keys ) {
+	if ( array() === $keys ) {
 		return false;
 	}
 	foreach ( $keys as $key ) {
@@ -363,7 +366,7 @@ function blockart_array_prepend( $array_value, $value, $key = null ) {
 	if ( func_num_args() === 2 ) {
 		array_unshift( $array_value, $value );
 	} else {
-		$array_value = [ $key => $value ] + $array_value;
+		$array_value = array( $key => $value ) + $array_value;
 	}
 	return $array_value;
 }
@@ -414,10 +417,10 @@ function blockart_array_random( $array_value, $preserve_keys, $number = null ) {
 		return $array_value[ array_rand( $array_value ) ];
 	}
 	if ( 0 === (int) $number ) {
-		return [];
+		return array();
 	}
 	$keys    = array_rand( $array_value, $number );
-	$results = [];
+	$results = array();
 	if ( $preserve_keys ) {
 		foreach ( (array) $keys as $key ) {
 			$results[ $key ] = $array_value[ $key ];
@@ -452,7 +455,7 @@ function blockart_array_set( &$array_value, $key, $value ): array {
 		}
 		unset( $keys[ $i ] );
 		if ( ! isset( $array_value[ $key ] ) || ! is_array( $array_value[ $key ] ) ) {
-			$array_value[ $key ] = [];
+			$array_value[ $key ] = array();
 		}
 		$array_value = &$array_value[ $key ];
 	}
@@ -514,7 +517,7 @@ function blockart_array_sort_recursive( array $array_value, int $options = SORT_
  */
 function blockart_array_to_css_classes( $array_value ) {
 	$class_list = blockart_array_wrap( $array_value );
-	$classes    = [];
+	$classes    = array();
 	foreach ( $class_list as $class => $constraint ) {
 		if ( is_numeric( $class ) ) {
 			$classes[] = $constraint;
@@ -544,9 +547,9 @@ function blockart_array_where( $array_value, $callback ): array {
  */
 function blockart_array_wrap( $value ): array {
 	if ( is_null( $value ) ) {
-		return [];
+		return array();
 	}
-	return is_array( $value ) ? $value : [ $value ];
+	return is_array( $value ) ? $value : array( $value );
 }
 
 /**
@@ -656,7 +659,7 @@ function blockart_parse_args( &$a, $b ) {
  * @return string
  */
 function blockart_array_to_html_attributes( $array_value ) {
-	$attributes = [];
+	$attributes = array();
 
 	foreach ( $array_value as $key => $value ) {
 		if ( is_null( $value ) ) {

@@ -40,7 +40,6 @@ final class BlockArt {
 		Review::init();
 		Blocks::init();
 		ScriptStyle::init();
-		BetaTester::init();
 		MaintenanceMode::init();
 		$this->init_hooks();
 	}
@@ -77,7 +76,6 @@ final class BlockArt {
 		 */
 		do_action( 'blockart_before_init' );
 		$this->update_plugin_version();
-		$this->load_text_domain();
 		/**
 		 * BlockArt init.
 		 *
@@ -98,13 +96,6 @@ final class BlockArt {
 		$blockart_version = get_option( '_blockart_version', '' );
 		do_action( 'blockart_version_update', BLOCKART_VERSION, $blockart_version );
 		update_option( '_blockart_version', BLOCKART_VERSION );
-	}
-
-	/**
-	 * Load plugin text domain.
-	 */
-	private function load_text_domain() {
-		load_plugin_textdomain( 'blockart', false, plugin_basename( BLOCKART_PLUGIN_DIR ) . '/languages' );
 	}
 
 	/**

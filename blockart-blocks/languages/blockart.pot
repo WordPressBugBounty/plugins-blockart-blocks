@@ -1,42 +1,42 @@
-# Copyright (C) 2024 WPBlockArt
+# Copyright (C) 2026 WPBlockArt
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: BlockArt Blocks 2.2.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/blockart-blocks\n"
+"Project-Id-Version: BlockArt Blocks 2.2.15\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-17T09:10:47+00:00\n"
+"POT-Creation-Date: 2026-01-29T16:21:06+05:45\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
-"X-Domain: blockart\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: blockart-blocks\n"
 
 #. Plugin Name of the plugin
-#: C:/laragon/www/one/wp-content/plugins/blockart-blocks/blockart.php
+#: blockart.php
 msgid "BlockArt Blocks"
 msgstr ""
 
 #. Description of the plugin
-#: C:/laragon/www/one/wp-content/plugins/blockart-blocks/blockart.php
+#: blockart.php
 msgid "Craft your website beautifully using Gutenberg blocks like section/column, heading, button, etc. Unlimited possibilities of design with features like colors, backgrounds, typography, layouts, spacing, etc."
 msgstr ""
 
 #. Author of the plugin
-#: C:/laragon/www/one/wp-content/plugins/blockart-blocks/blockart.php
+#: blockart.php
 msgid "WPBlockArt"
 msgstr ""
 
 #. Author URI of the plugin
-#: C:/laragon/www/one/wp-content/plugins/blockart-blocks/blockart.php
+#: blockart.php
 msgid "https://wpblockart.com/"
 msgstr ""
 
 #: includes/Admin.php:50
 #: includes/Admin.php:51
-#: includes/Blocks.php:267
+#: includes/Blocks.php:300
 #: dist/blocks.js:281
 msgid "BlockArt"
 msgstr ""
@@ -67,15 +67,20 @@ msgstr ""
 
 #: includes/Admin.php:114
 #: includes/Admin.php:115
+msgid "Free Vs Pro"
+msgstr ""
+
+#: includes/Admin.php:119
+#: includes/Admin.php:120
 #: dist/dashboard.js:281
 msgid "Help"
 msgstr ""
 
-#: includes/Admin.php:171
+#: includes/Admin.php:176
 msgid "Thank you for creating with BlockArt Blocks."
 msgstr ""
 
-#: includes/Admin.php:182
+#: includes/Admin.php:187
 msgid "Version "
 msgstr ""
 
@@ -85,6 +90,7 @@ msgstr ""
 
 #. Translators: 1: Block name
 #: includes/BlockTypes/AbstractBlock.php:79
+#, php-format
 msgid "Metadata file for %s block does not exist."
 msgstr ""
 
@@ -112,7 +118,7 @@ msgstr ""
 #: includes/RestApi/Controllers/ChangelogController.php:106
 #: includes/RestApi/Controllers/ImageImportController.php:126
 #: includes/RestApi/Controllers/LibraryDataController.php:68
-#: includes/RestApi/Controllers/LibraryDataController.php:161
+#: includes/RestApi/Controllers/LibraryDataController.php:162
 #: includes/RestApi/Controllers/RegenerateAssetsController.php:61
 #: includes/RestApi/Controllers/SettingsController.php:88
 #: includes/RestApi/Controllers/SettingsController.php:106
@@ -126,6 +132,10 @@ msgstr ""
 
 #: includes/RestApi/Controllers/ChangelogController.php:152
 msgid "Failed to read changelog."
+msgstr ""
+
+#: includes/RestApi/Controllers/LibraryDataController.php:179
+msgid "Invalid data received from the library."
 msgstr ""
 
 #: includes/RestApi/Controllers/SettingsController.php:143
@@ -340,6 +350,7 @@ msgstr ""
 
 #. Translators: 1: Plugin name, 2: Benefit, 3: Break tag, 4: Smile icon
 #: includes/Review.php:66
+#, php-format
 msgid "Hope you are having nice experience with %1$s plugin. Please provide this plugin a nice review. %2$s %3$s Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the plugin without any issues and also to provide free support like we have been doing. %4$s"
 msgstr ""
 
@@ -528,6 +539,7 @@ msgid "Paste Styles"
 msgstr ""
 
 #: dist/blocks.js:281
+#, js-format
 msgid "Delete color #%s"
 msgstr ""
 
@@ -621,6 +633,7 @@ msgid "Global"
 msgstr ""
 
 #: dist/blocks.js:281
+#, js-format
 msgid "Delete typography #%s"
 msgstr ""
 
@@ -782,6 +795,7 @@ msgid "BlockArt Library"
 msgstr ""
 
 #: dist/blocks.js:281
+#, js-format
 msgid "All %s"
 msgstr ""
 
@@ -838,10 +852,11 @@ msgid "Copy"
 msgstr ""
 
 #: dist/blocks.js:281
-msgid "Global Colors"
+msgid "BlockArt Colors"
 msgstr ""
 
 #: dist/blocks.js:281
+#, js-format
 msgid "Gradient control point at position %1$s%% with color code %2$s."
 msgstr ""
 
@@ -1350,6 +1365,18 @@ msgid "Enable Flex"
 msgstr ""
 
 #: dist/blocks.js:281
+msgid "Overlay"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Background Opacity"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Blur Effect"
+msgstr ""
+
+#: dist/blocks.js:281
 msgid "Add Column"
 msgstr ""
 
@@ -1482,6 +1509,14 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit a
 msgstr ""
 
 #: dist/blocks.js:281
+msgid "After Question"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "After Answer"
+msgstr ""
+
+#: dist/blocks.js:281
 msgid "Expand first Item"
 msgstr ""
 
@@ -1494,7 +1529,27 @@ msgid "Add FAQ Schema"
 msgstr ""
 
 #: dist/blocks.js:281
+msgid "Item Margin"
+msgstr ""
+
+#: dist/blocks.js:281
 msgid "Thickness"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Show Separator On"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Always"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Expanded"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Separator Position"
 msgstr ""
 
 #: dist/blocks.js:281
@@ -1603,6 +1658,10 @@ msgstr ""
 
 #: dist/blocks.js:281
 msgid "Icon Alignment"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Icon Border"
 msgstr ""
 
 #: dist/blocks.js:281
@@ -1806,27 +1865,11 @@ msgid "Enable Caption"
 msgstr ""
 
 #: dist/blocks.js:281
-msgid "Overlay"
-msgstr ""
-
-#: dist/blocks.js:281
 msgid "Content Position"
 msgstr ""
 
 #: dist/blocks.js:281
-msgid "Show Separator On"
-msgstr ""
-
-#: dist/blocks.js:281
-msgid "Always"
-msgstr ""
-
-#: dist/blocks.js:281
 msgid "Separator Style"
-msgstr ""
-
-#: dist/blocks.js:281
-msgid "Separator Position"
 msgstr ""
 
 #: dist/blocks.js:281
@@ -2339,6 +2382,158 @@ msgid "Bar Background"
 msgstr ""
 
 #: dist/blocks.js:281
+msgid "Author Exclude"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Categories"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Categories Exclude"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Tags"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Tags Exclude"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Query"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Posts"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Pages"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Post Type"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Post"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Posts Per Page"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "ID"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Date"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Modified Date"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Order By"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Ascending"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Descending"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Order"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Search"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Post Status"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Publish"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Draft"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Pending"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Future"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Private"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Only show sticky posts"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Query Filters"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Before Date"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "After Date"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Status"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Title, Date & Excerpt"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Title & Date"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Title & Excerpt"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Image, Date, Title & Excerpt"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Image, Date & Title"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Start Blank"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Choose Your Templates"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "Add Pagination"
+msgstr ""
+
+#: dist/blocks.js:281
 msgid "Container"
 msgstr ""
 
@@ -2451,7 +2646,7 @@ msgid "Arrow Distance from Edges"
 msgstr ""
 
 #: dist/blocks.js:281
-msgid "Top Margin for Dots"
+msgid "Bottom Margin for Dots"
 msgstr ""
 
 #: dist/blocks.js:281
@@ -2712,6 +2907,7 @@ msgid "Social Icon"
 msgstr ""
 
 #: dist/blocks.js:281
+#, js-format
 msgid "Icon %d"
 msgstr ""
 
@@ -2744,10 +2940,6 @@ msgid "Arrows and Dots"
 msgstr ""
 
 #: dist/blocks.js:281
-msgid "Bottom Margin for Dots"
-msgstr ""
-
-#: dist/blocks.js:281
 msgid "Connector"
 msgstr ""
 
@@ -2757,6 +2949,10 @@ msgstr ""
 
 #: dist/blocks.js:281
 msgid "Item"
+msgstr ""
+
+#: dist/blocks.js:281
+msgid "https://example.com"
 msgstr ""
 
 #: dist/blocks.js:281
@@ -2801,6 +2997,10 @@ msgstr ""
 
 #: dist/dashboard.js:281
 msgid "Image Comparison"
+msgstr ""
+
+#: dist/dashboard.js:281
+msgid "Query Loop"
 msgstr ""
 
 #: dist/dashboard.js:281
@@ -2908,10 +3108,12 @@ msgid "ColorMag is always the best choice when it comes to magazine, news, and b
 msgstr ""
 
 #: dist/dashboard.js:281
+#, js-format
 msgid "%s plugin activated successfully"
 msgstr ""
 
 #: dist/dashboard.js:281
+#, js-format
 msgid "%s plugin installed and activated successfully"
 msgstr ""
 
@@ -2932,10 +3134,12 @@ msgid "Install Plugin"
 msgstr ""
 
 #: dist/dashboard.js:281
+#, js-format
 msgid "Are you sure? You want to activate %s plugin."
 msgstr ""
 
 #: dist/dashboard.js:281
+#, js-format
 msgid "Are you sure? You want to install and activate %s plugin."
 msgstr ""
 
@@ -3231,539 +3435,6 @@ msgstr ""
 msgid "Collapse Menu"
 msgstr ""
 
-#: dist/blockquote/block.json
-msgctxt "block title"
-msgid "Blockquote"
-msgstr ""
-
-#: dist/blockquote/block.json
-msgctxt "block description"
-msgid "Customize typography and style blockquotes with multiple setting options."
-msgstr ""
-
-#: dist/blockquote/block.json
-msgctxt "block keyword"
-msgid "blockquote"
-msgstr ""
-
-#: dist/blockquote/block.json
-#: dist/notice/block.json
-#: dist/paragraph/block.json
-msgctxt "block keyword"
-msgid "text"
-msgstr ""
-
-#: dist/button/block.json
-msgctxt "block title"
-msgid "Button"
-msgstr ""
-
-#: dist/button/block.json
-#: dist/buttons/block.json
-#: dist/info/block.json
-msgctxt "block description"
-msgid "Redirect users to your important pages or websites by clicking button."
-msgstr ""
-
-#: dist/button/block.json
-#: dist/buttons/block.json
-msgctxt "block keyword"
-msgid "button"
-msgstr ""
-
-#: dist/button/block.json
-#: dist/buttons/block.json
-#: dist/icon/block.json
-msgctxt "block keyword"
-msgid "icon"
-msgstr ""
-
-#: dist/buttons/block.json
-msgctxt "block title"
-msgid "Buttons"
-msgstr ""
-
-#: dist/call-to-action/block.json
-msgctxt "block title"
-msgid "Call to Action"
-msgstr ""
-
-#: dist/call-to-action/block.json
-msgctxt "block description"
-msgid "Create desired action on your site"
-msgstr ""
-
-#: dist/call-to-action/block.json
-msgctxt "block keyword"
-msgid "call to action"
-msgstr ""
-
-#: dist/call-to-action/block.json
-msgctxt "block keyword"
-msgid "cta"
-msgstr ""
-
-#: dist/column/block.json
-msgctxt "block title"
-msgid "Column"
-msgstr ""
-
-#: dist/column/block.json
-msgctxt "block description"
-msgid "An advanced single column within section block."
-msgstr ""
-
-#: dist/countdown/block.json
-msgctxt "block title"
-msgid "Countdown"
-msgstr ""
-
-#: dist/countdown/block.json
-msgctxt "block description"
-msgid "Countdown."
-msgstr ""
-
-#: dist/countdown/block.json
-msgctxt "block keyword"
-msgid "count"
-msgstr ""
-
-#: dist/countdown/block.json
-msgctxt "block keyword"
-msgid "countdown"
-msgstr ""
-
-#: dist/counter/block.json
-msgctxt "block title"
-msgid "Counter"
-msgstr ""
-
-#: dist/counter/block.json
-msgctxt "block description"
-msgid "Create counter on different Style."
-msgstr ""
-
-#: dist/counter/block.json
-msgctxt "block keyword"
-msgid "counter"
-msgstr ""
-
-#: dist/faq/block.json
-msgctxt "block title"
-msgid "FAQ Child"
-msgstr ""
-
-#: dist/faq/block.json
-#: dist/faqs/block.json
-msgctxt "block keyword"
-msgid "faq"
-msgstr ""
-
-#: dist/faqs/block.json
-msgctxt "block title"
-msgid "FAQ"
-msgstr ""
-
-#: dist/faqs/block.json
-msgctxt "block description"
-msgid "Display Frequently Asked Questions as an accordion."
-msgstr ""
-
-#: dist/faqs/block.json
-#: dist/timeline/block.json
-msgctxt "block keyword"
-msgid "accordion"
-msgstr ""
-
-#: dist/faqs/block.json
-msgctxt "block keyword"
-msgid "question"
-msgstr ""
-
-#: dist/heading/block.json
-msgctxt "block title"
-msgid "Heading"
-msgstr ""
-
-#: dist/heading/block.json
-msgctxt "block description"
-msgid "Create stylish title for each section with various markups from H1 to H6."
-msgstr ""
-
-#: dist/heading/block.json
-msgctxt "block keyword"
-msgid "heading"
-msgstr ""
-
-#: dist/heading/block.json
-msgctxt "block keyword"
-msgid "headline"
-msgstr ""
-
-#: dist/icon-list-item/block.json
-msgctxt "block title"
-msgid "Icon List Item"
-msgstr ""
-
-#: dist/icon-list-item/block.json
-#: dist/icon-list/block.json
-msgctxt "block description"
-msgid "Create a list with icons."
-msgstr ""
-
-#: dist/icon-list-item/block.json
-#: dist/icon-list/block.json
-msgctxt "block keyword"
-msgid "icon list"
-msgstr ""
-
-#: dist/icon-list-item/block.json
-#: dist/icon-list/block.json
-msgctxt "block keyword"
-msgid "list"
-msgstr ""
-
-#: dist/icon-list/block.json
-msgctxt "block title"
-msgid "Icon List"
-msgstr ""
-
-#: dist/icon/block.json
-msgctxt "block title"
-msgid "Icon"
-msgstr ""
-
-#: dist/icon/block.json
-msgctxt "block description"
-msgid "Add Icons with your customize features."
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block title"
-msgid "Image Comparison"
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block description"
-msgid "Compare two images with a slider"
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block keyword"
-msgid "image-comparison"
-msgstr ""
-
-#: dist/image-comparison/block.json
-#: dist/image/block.json
-msgctxt "block keyword"
-msgid "image"
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block keyword"
-msgid "compare"
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block keyword"
-msgid "comparison-slider"
-msgstr ""
-
-#: dist/image-comparison/block.json
-msgctxt "block keyword"
-msgid "blockart"
-msgstr ""
-
-#: dist/image-gallery/block.json
-msgctxt "block title"
-msgid "Image Gallery"
-msgstr ""
-
-#: dist/image-gallery/block.json
-msgctxt "block description"
-msgid "Create customizable gallery of multiple images."
-msgstr ""
-
-#: dist/image-gallery/block.json
-msgctxt "block keyword"
-msgid "gallery"
-msgstr ""
-
-#: dist/image-gallery/block.json
-msgctxt "block keyword"
-msgid "images"
-msgstr ""
-
-#: dist/image/block.json
-msgctxt "block title"
-msgid "Image"
-msgstr ""
-
-#: dist/image/block.json
-msgctxt "block description"
-msgid "Visual communication with your visitor via images."
-msgstr ""
-
-#: dist/info/block.json
-msgctxt "block title"
-msgid "Info Box"
-msgstr ""
-
-#: dist/info/block.json
-msgctxt "block keyword"
-msgid "info"
-msgstr ""
-
-#: dist/lottie/block.json
-msgctxt "block title"
-msgid "Lottie"
-msgstr ""
-
-#: dist/lottie/block.json
-msgctxt "block description"
-msgid "Display awesome lottie animations to your page."
-msgstr ""
-
-#: dist/lottie/block.json
-msgctxt "block keyword"
-msgid "lottie"
-msgstr ""
-
-#: dist/lottie/block.json
-msgctxt "block keyword"
-msgid "animation"
-msgstr ""
-
-#: dist/map/block.json
-msgctxt "block title"
-msgid "Google Map"
-msgstr ""
-
-#: dist/map/block.json
-msgctxt "block description"
-msgid "Google Map blocks allows you to add maps."
-msgstr ""
-
-#: dist/map/block.json
-msgctxt "block keyword"
-msgid "map"
-msgstr ""
-
-#: dist/modal/block.json
-msgctxt "block title"
-msgid "Modal"
-msgstr ""
-
-#: dist/modal/block.json
-msgctxt "block description"
-msgid "Add Popup Modal on click."
-msgstr ""
-
-#: dist/modal/block.json
-msgctxt "block keyword"
-msgid "modal"
-msgstr ""
-
-#: dist/modal/block.json
-msgctxt "block keyword"
-msgid "popup"
-msgstr ""
-
-#: dist/notice/block.json
-msgctxt "block title"
-msgid "Notice"
-msgstr ""
-
-#: dist/notice/block.json
-msgctxt "block description"
-msgid "Add different inline notices into your page."
-msgstr ""
-
-#: dist/notice/block.json
-msgctxt "block keyword"
-msgid "notice"
-msgstr ""
-
-#: dist/notice/block.json
-msgctxt "block keyword"
-msgid "message"
-msgstr ""
-
-#: dist/paragraph/block.json
-msgctxt "block title"
-msgid "Paragraph"
-msgstr ""
-
-#: dist/paragraph/block.json
-#: dist/progress/block.json
-msgctxt "block description"
-msgid "Customize typography and style paragraphs with multiple setting options."
-msgstr ""
-
-#: dist/paragraph/block.json
-msgctxt "block keyword"
-msgid "paragraph"
-msgstr ""
-
-#: dist/price-list-child/block.json
-msgctxt "block title"
-msgid "Price List Child"
-msgstr ""
-
-#: dist/price-list-child/block.json
-#: dist/price-list/block.json
-#: dist/price/block.json
-msgctxt "block keyword"
-msgid "price list"
-msgstr ""
-
-#: dist/price-list-child/block.json
-#: dist/price-list/block.json
-#: dist/price/block.json
-msgctxt "block keyword"
-msgid "price"
-msgstr ""
-
-#: dist/price-list/block.json
-msgctxt "block title"
-msgid "Price Lists"
-msgstr ""
-
-#: dist/price-list/block.json
-msgctxt "block description"
-msgid "Price Lists."
-msgstr ""
-
-#: dist/price/block.json
-msgctxt "block title"
-msgid "Price"
-msgstr ""
-
-#: dist/progress/block.json
-msgctxt "block title"
-msgid "Progress"
-msgstr ""
-
-#: dist/progress/block.json
-msgctxt "block keyword"
-msgid "progress"
-msgstr ""
-
-#: dist/progress/block.json
-msgctxt "block keyword"
-msgid "bar"
-msgstr ""
-
-#: dist/section/block.json
-msgctxt "block title"
-msgid "Section"
-msgstr ""
-
-#: dist/section/block.json
-msgctxt "block description"
-msgid "Add Rows and Columns inside rows to create various layouts."
-msgstr ""
-
-#: dist/section/block.json
-msgctxt "block keyword"
-msgid "section"
-msgstr ""
-
-#: dist/section/block.json
-msgctxt "block keyword"
-msgid "column"
-msgstr ""
-
-#: dist/section/block.json
-msgctxt "block keyword"
-msgid "layout"
-msgstr ""
-
-#: dist/slide/block.json
-#: dist/testimonial-slide/block.json
-msgctxt "block title"
-msgid "Slide"
-msgstr ""
-
-#: dist/slide/block.json
-msgctxt "block description"
-msgid "Create a slide inside slider"
-msgstr ""
-
-#: dist/slide/block.json
-#: dist/slider/block.json
-msgctxt "block keyword"
-msgid "slide"
-msgstr ""
-
-#: dist/slider/block.json
-msgctxt "block title"
-msgid "Slider"
-msgstr ""
-
-#: dist/slider/block.json
-msgctxt "block description"
-msgid "Create a slider with multiple slides."
-msgstr ""
-
-#: dist/slider/block.json
-msgctxt "block keyword"
-msgid "slider"
-msgstr ""
-
-#: dist/social-inner/block.json
-msgctxt "block title"
-msgid "Social Icon"
-msgstr ""
-
-#: dist/social-inner/block.json
-#: dist/social-share/block.json
-msgctxt "block description"
-msgid "Share your content through different platforms."
-msgstr ""
-
-#: dist/social-inner/block.json
-#: dist/social-share/block.json
-msgctxt "block keyword"
-msgid "social share"
-msgstr ""
-
-#: dist/social-inner/block.json
-#: dist/social-share/block.json
-msgctxt "block keyword"
-msgid "social"
-msgstr ""
-
-#: dist/social-share/block.json
-msgctxt "block title"
-msgid "Social Share"
-msgstr ""
-
-#: dist/spacing/block.json
-msgctxt "block title"
-msgid "Spacing"
-msgstr ""
-
-#: dist/spacing/block.json
-msgctxt "block description"
-msgid "Give your designs room to breathe with white space."
-msgstr ""
-
-#: dist/spacing/block.json
-msgctxt "block keyword"
-msgid "spacing"
-msgstr ""
-
-#: dist/spacing/block.json
-msgctxt "block keyword"
-msgid "spacer"
-msgstr ""
-
-#: dist/spacing/block.json
-msgctxt "block keyword"
-msgid "divider"
-msgstr ""
-
 #: dist/tab-titles/block.json
 msgctxt "block title"
 msgid "Tab Titles"
@@ -3772,110 +3443,4 @@ msgstr ""
 #: dist/tab/block.json
 msgctxt "block title"
 msgid "Tab"
-msgstr ""
-
-#: dist/table-of-contents/block.json
-msgctxt "block title"
-msgid "Table Of Contents"
-msgstr ""
-
-#: dist/table-of-contents/block.json
-msgctxt "block description"
-msgid "Make page navigation easy with table of contents."
-msgstr ""
-
-#: dist/table-of-contents/block.json
-msgctxt "block keyword"
-msgid "table of contents"
-msgstr ""
-
-#: dist/table-of-contents/block.json
-msgctxt "block keyword"
-msgid "table"
-msgstr ""
-
-#: dist/tabs/block.json
-msgctxt "block title"
-msgid "Tabs"
-msgstr ""
-
-#: dist/tabs/block.json
-msgctxt "block description"
-msgid "Tabs block allows you to add multiple tabs."
-msgstr ""
-
-#: dist/tabs/block.json
-msgctxt "block keyword"
-msgid "tab"
-msgstr ""
-
-#: dist/tabs/block.json
-msgctxt "block keyword"
-msgid "tabs"
-msgstr ""
-
-#: dist/team/block.json
-msgctxt "block title"
-msgid "Team"
-msgstr ""
-
-#: dist/team/block.json
-msgctxt "block description"
-msgid "Create team layout with heading, subheading, description and image."
-msgstr ""
-
-#: dist/team/block.json
-msgctxt "block keyword"
-msgid "team"
-msgstr ""
-
-#: dist/testimonial-slide/block.json
-msgctxt "block description"
-msgid "Create a slide inside testimonial-slide"
-msgstr ""
-
-#: dist/testimonial-slide/block.json
-msgctxt "block keyword"
-msgid "testimonial-slide"
-msgstr ""
-
-#: dist/testimonial/block.json
-msgctxt "block title"
-msgid "Testimonial"
-msgstr ""
-
-#: dist/testimonial/block.json
-msgctxt "block description"
-msgid "Create a slider with multiple testimonial."
-msgstr ""
-
-#: dist/testimonial/block.json
-msgctxt "block keyword"
-msgid "testimonial"
-msgstr ""
-
-#: dist/timeline-inner/block.json
-msgctxt "block title"
-msgid "Timeline Child"
-msgstr ""
-
-#: dist/timeline-inner/block.json
-#: dist/timeline/block.json
-msgctxt "block keyword"
-msgid "timeline"
-msgstr ""
-
-#: dist/timeline/block.json
-msgctxt "block title"
-msgid "Timeline"
-msgstr ""
-
-#: dist/timeline/block.json
-msgctxt "block description"
-msgid "Display Frequently Asked Titles as an accordion."
-msgstr ""
-
-#: dist/timeline/block.json
-msgctxt "block keyword"
-msgid "title"
 msgstr ""

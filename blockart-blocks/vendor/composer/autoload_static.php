@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6114372ef4fa9f385741148b0c3da741
+class ComposerStaticInit7c5a0bca96ca44bf6478c95e64322075
 {
     public static $files = array (
         'ace6d88241f812b4accb2d847454aef6' => __DIR__ . '/..' . '/halaxa/json-machine/src/functions.php',
@@ -59,7 +59,6 @@ class ComposerStaticInit6114372ef4fa9f385741148b0c3da741
         'BlockArt\\Abstracts\\Styles' => __DIR__ . '/../..' . '/includes/Abstracts/Styles.php',
         'BlockArt\\Activation' => __DIR__ . '/../..' . '/includes/Activation.php',
         'BlockArt\\Admin' => __DIR__ . '/../..' . '/includes/Admin.php',
-        'BlockArt\\BetaTester' => __DIR__ . '/../..' . '/includes/BetaTester.php',
         'BlockArt\\BlockArt' => __DIR__ . '/../..' . '/includes/BlockArt.php',
         'BlockArt\\BlockStyles' => __DIR__ . '/../..' . '/includes/BlockStyles.php',
         'BlockArt\\BlockTypes\\AbstractBlock' => __DIR__ . '/../..' . '/includes/BlockTypes/AbstractBlock.php',
@@ -302,9 +301,9 @@ class ComposerStaticInit6114372ef4fa9f385741148b0c3da741
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6114372ef4fa9f385741148b0c3da741::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7c5a0bca96ca44bf6478c95e64322075::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7c5a0bca96ca44bf6478c95e64322075::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7c5a0bca96ca44bf6478c95e64322075::$classMap;
 
         }, null, ClassLoader::class);
     }

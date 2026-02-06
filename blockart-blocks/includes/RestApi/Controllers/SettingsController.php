@@ -85,7 +85,7 @@ class SettingsController extends \WP_REST_Controller {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+				esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}
@@ -103,7 +103,7 @@ class SettingsController extends \WP_REST_Controller {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+				esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}
@@ -137,181 +137,181 @@ class SettingsController extends \WP_REST_Controller {
 				),
 				'blocks' => array(
 					'type'             => 'object',
-					'description'      => __( 'Blocks', 'blockart' ),
+					'description'      => __( 'Blocks', 'blockart-blocks' ),
 					'properties'       => array(
 						'section'           => array(
-							'description' => __( 'Section block', 'blockart' ),
+							'description' => __( 'Section block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'heading'           => array(
-							'description' => __( 'Heading block', 'blockart' ),
+							'description' => __( 'Heading block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'paragraph'         => array(
-							'description' => __( 'Paragraph block', 'blockart' ),
+							'description' => __( 'Paragraph block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'button'            => array(
-							'description' => __( 'Button block', 'blockart' ),
+							'description' => __( 'Button block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'image'             => array(
-							'description' => __( 'Image block', 'blockart' ),
+							'description' => __( 'Image block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'countdown'         => array(
-							'description' => __( 'Countdown block', 'blockart' ),
+							'description' => __( 'Countdown block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'counter'           => array(
-							'description' => __( 'Counter block', 'blockart' ),
+							'description' => __( 'Counter block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'spacing'           => array(
-							'description' => __( 'Spacing block', 'blockart' ),
+							'description' => __( 'Spacing block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'info-box'          => array(
-							'description' => __( 'Info box block', 'blockart' ),
+							'description' => __( 'Info box block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'lottie'            => array(
-							'description' => __( 'Lottie animation block', 'blockart' ),
+							'description' => __( 'Lottie animation block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'team'              => array(
-							'description' => __( 'Team block', 'blockart' ),
+							'description' => __( 'Team block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'table-of-contents' => array(
-							'description' => __( 'Table of contents block', 'blockart' ),
+							'description' => __( 'Table of contents block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'tabs'              => array(
-							'description' => __( 'Tabs block', 'blockart' ),
+							'description' => __( 'Tabs block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'social-share'      => array(
-							'description' => __( 'Social share block', 'blockart' ),
+							'description' => __( 'Social share block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'info'              => array(
-							'description' => __( 'Info block', 'blockart' ),
+							'description' => __( 'Info block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'blockquote'        => array(
-							'description' => __( 'Blockquote block', 'blockart' ),
+							'description' => __( 'Blockquote block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'timeline'          => array(
-							'description' => __( 'Timeline block', 'blockart' ),
+							'description' => __( 'Timeline block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'notice'            => array(
-							'description' => __( 'Notice block', 'blockart' ),
+							'description' => __( 'Notice block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'progress'          => array(
-							'description' => __( 'Progress block', 'blockart' ),
+							'description' => __( 'Progress block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'call-to-action'    => array(
-							'description' => __( 'Call to action block', 'blockart' ),
+							'description' => __( 'Call to action block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'slider'            => array(
-							'description' => __( 'Slider block', 'blockart' ),
+							'description' => __( 'Slider block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'map'               => array(
-							'description' => __( 'Google maps block', 'blockart' ),
+							'description' => __( 'Google maps block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'testimonial'       => array(
-							'description' => __( 'Testimonial block', 'blockart' ),
+							'description' => __( 'Testimonial block', 'blockart-blocks' ),
 							'type'        => 'boolean',
 						),
 						'faq'               => array(
-							'description'     => __( 'FAQ block', 'blockart' ),
+							'description'     => __( 'FAQ block', 'blockart-blocks' ),
 							'type'            => 'boolean',
 							'icon'            => array(
-								'description' => __( 'Icon block', 'blockart' ),
+								'description' => __( 'Icon block', 'blockart-blocks' ),
 								'type'        => 'boolean',
 							),
 							'icon-list'       => array(
-								'description' => __( 'Icon list block', 'blockart' ),
+								'description' => __( 'Icon list block', 'blockart-blocks' ),
 								'type'        => 'boolean',
 							),
 							'modal'           => array(
-								'description' => __( 'Modal block', 'blockart' ),
+								'description' => __( 'Modal block', 'blockart-blocks' ),
 								'type'        => 'boolean',
 							),
 							'imageComparison' => array(
-								'description' => __( 'Image Comparison block', 'blockart' ),
+								'description' => __( 'Image Comparison block', 'blockart-blocks' ),
 								'type'        => 'boolean',
 							),
 						),
 					),
 					'editor'           => array(
 						'type'        => 'object',
-						'description' => __( 'Editor Options', 'blockart' ),
+						'description' => __( 'Editor Options', 'blockart-blocks' ),
 						'properties'  => array(
 							'section-width'          => array(
 								'type'        => 'integer',
-								'description' => __( 'Default section max width', 'blockart' ),
+								'description' => __( 'Default section max width', 'blockart-blocks' ),
 							),
 							'editor-blocks-spacing'  => array(
 								'type'        => 'integer',
-								'description' => __( 'Spacing between blocks in the block editor', 'blockart' ),
+								'description' => __( 'Spacing between blocks in the block editor', 'blockart-blocks' ),
 							),
 							'design-library'         => array(
 								'type'        => 'boolean',
-								'description' => __( 'Collection of pre-made blocks', 'blockart' ),
+								'description' => __( 'Collection of pre-made blocks', 'blockart-blocks' ),
 							),
 							'responsive-breakpoints' => array(
 								'type'        => 'object',
-								'description' => __( 'Responsive breakpoints', 'blockart' ),
+								'description' => __( 'Responsive breakpoints', 'blockart-blocks' ),
 								'properties'  => array(
 									'tablet' => array(
 										'type'        => 'integer',
-										'description' => __( 'Tablet breakpoint', 'blockart' ),
+										'description' => __( 'Tablet breakpoint', 'blockart-blocks' ),
 									),
 									'mobile' => array(
 										'type'        => 'integer',
-										'description' => __( 'Mobile breakpoint', 'blockart' ),
+										'description' => __( 'Mobile breakpoint', 'blockart-blocks' ),
 									),
 								),
 							),
 							'copy-paste-styles'      => array(
 								'type'        => 'boolean',
-								'description' => __( 'Copy paste style for blocks', 'blockart' ),
+								'description' => __( 'Copy paste style for blocks', 'blockart-blocks' ),
 							),
 							'auto-collapse-panels'   => array(
 								'type'        => 'boolean',
-								'description' => __( 'Panels behavior similar to accordion. Open one at a time', 'blockart' ),
+								'description' => __( 'Panels behavior similar to accordion. Open one at a time', 'blockart-blocks' ),
 							),
 						),
 					),
 					'performance'      => array(
 						'type'        => 'object',
-						'description' => __( 'Performance', 'blockart' ),
+						'description' => __( 'Performance', 'blockart-blocks' ),
 						'properties'  => array(
 							'local-google-fonts'        => array(
 								'type'        => 'boolean',
-								'description' => __( 'Load google fonts locally', 'blockart' ),
+								'description' => __( 'Load google fonts locally', 'blockart-blocks' ),
 							),
 							'preload-local-fonts'       => array(
 								'type'        => 'boolean',
-								'description' => __( 'Preload local fonts', 'blockart' ),
+								'description' => __( 'Preload local fonts', 'blockart-blocks' ),
 							),
 							'allow-only-selected-fonts' => array(
 								'type'        => 'boolean',
-								'description' => __( 'Allow only selected fonts', 'blockart' ),
+								'description' => __( 'Allow only selected fonts', 'blockart-blocks' ),
 							),
 
 							'allowed-fonts'             => array(
 								'type'        => 'array',
-								'description' => __( 'Allowed fonts', 'blockart' ),
+								'description' => __( 'Allowed fonts', 'blockart-blocks' ),
 								'items'       => array(
 									'type'       => 'object',
 									'properties' => array(
@@ -361,47 +361,47 @@ class SettingsController extends \WP_REST_Controller {
 					),
 					'asset-generation' => array(
 						'type'        => 'object',
-						'description' => __( 'Asset generation', 'blockart' ),
+						'description' => __( 'Asset generation', 'blockart-blocks' ),
 						'properties'  => array(
 							'external-file' => array(
 								'type'        => 'boolean',
-								'description' => __( 'File generation', 'blockart' ),
+								'description' => __( 'File generation', 'blockart-blocks' ),
 							),
 						),
 					),
 					'version-control'  => array(
 						'type'        => 'object',
-						'description' => __( 'Version control', 'blockart' ),
+						'description' => __( 'Version control', 'blockart-blocks' ),
 						'properties'  => array(
 							'beta-tester' => array(
 								'type'        => 'boolean',
-								'description' => __( 'Beta tester', 'blockart' ),
+								'description' => __( 'Beta tester', 'blockart-blocks' ),
 							),
 						),
 					),
 					'integrations'     => array(
 						'type'        => 'object',
-						'description' => __( 'Third party integrations', 'blockart' ),
+						'description' => __( 'Third party integrations', 'blockart-blocks' ),
 						'properties'  => array(
 							'google-maps-embed-api-key' => array(
 								'type'        => 'string',
-								'description' => __( 'Google maps embed api key', 'blockart' ),
+								'description' => __( 'Google maps embed api key', 'blockart-blocks' ),
 							),
 						),
 					),
 					'maintenance-mode' => array(
 						'type'        => 'object',
-						'description' => __( 'Maintenance mode', 'blockart' ),
+						'description' => __( 'Maintenance mode', 'blockart-blocks' ),
 						'properties'  => array(
 							'maintenance-mode' => array(
 								'type'        => 'boolean',
-								'description' => __( 'Enable or disable maintenance mode', 'blockart' ),
+								'description' => __( 'Enable or disable maintenance mode', 'blockart-blocks' ),
 							),
 							'maintenance-page' => array(
 								'oneOf' => array(
 									array(
 										'type'        => 'object',
-										'description' => __( 'Maintenance mode page data.', 'blockart' ),
+										'description' => __( 'Maintenance mode page data.', 'blockart-blocks' ),
 										'properties'  => array(
 											'id'    => array(
 												'type' => 'number',

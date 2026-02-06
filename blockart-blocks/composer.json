@@ -1,0 +1,46 @@
+{
+  "name": "themegrill/blockart",
+  "description": "Maketh thy website most wondrous.",
+  "type": "wordpress-plugin",
+  "version": "2.2.15",
+  "autoload": {
+    "files": [
+      "includes/Helpers/core.php",
+      "includes/Helpers/array.php"
+    ],
+    "psr-4": {
+      "BlockArt\\": "includes/",
+      "BlockArt\\Traits\\": "includes/traits/"
+    }
+  },
+  "require": {
+    "composer/installers": "1.11.0",
+    "sabberworm/php-css-parser": "^8.4",
+    "halaxa/json-machine": "^1.1"
+  },
+  "require-dev": {
+    "wp-cli/wp-cli": "^2.4",
+    "wp-cli/i18n-command": "^2.2",
+    "wpeverest/wpeverest-sniffs": "^0.1.0"
+  },
+  "scripts": {
+    "makepot": [
+      "wp i18n make-pot . ./languages/blockart.pot --include=\"dist,includes\" --exclude=\".github,.wordpress-org,bin,node_modules,vendor,src,dist/org,scripts\""
+    ],
+    "phpcs": [
+      "phpcs -s -p"
+    ],
+    "phpcs-pre-commit": [
+      "phpcs -s -p -n"
+    ],
+    "phpcbf": [
+      "phpcbf -p"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

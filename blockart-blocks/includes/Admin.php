@@ -47,8 +47,8 @@ class Admin {
 	 */
 	public function init_menus() {
 		$blockart_page = add_menu_page(
-			esc_html__( 'BlockArt', 'blockart' ),
-			esc_html__( 'BlockArt', 'blockart' ),
+			esc_html__( 'BlockArt', 'blockart-blocks' ),
+			esc_html__( 'BlockArt', 'blockart-blocks' ),
 			'manage_options',
 			'blockart',
 			array( $this, 'markup' ),
@@ -80,7 +80,7 @@ class Admin {
 		}
 
 		add_action( "admin_print_scripts-$blockart_page", array( $this, 'enqueue' ) );
-		remove_submenu_page( 'blockart', 'blockart' );
+		remove_submenu_page( 'blockart', 'blockart-blocks' );
 	}
 
 	/**
@@ -89,38 +89,38 @@ class Admin {
 	 * @return array
 	 */
 	private function get_submenus() {
-		$submenus = [
-			'dashboard'   => [
-				'page_title' => __( 'Dashboard', 'blockart' ),
-				'menu_title' => __( 'Dashboard', 'blockart' ),
+		$submenus = array(
+			'dashboard'   => array(
+				'page_title' => __( 'Dashboard', 'blockart-blocks' ),
+				'menu_title' => __( 'Dashboard', 'blockart-blocks' ),
 				'position'   => 10,
-			],
-			'blocks'      => [
-				'page_title' => __( 'Blocks', 'blockart' ),
-				'menu_title' => __( 'Blocks', 'blockart' ),
+			),
+			'blocks'      => array(
+				'page_title' => __( 'Blocks', 'blockart-blocks' ),
+				'menu_title' => __( 'Blocks', 'blockart-blocks' ),
 				'position'   => 20,
-			],
-			'products'    => [
-				'page_title' => __( 'Products', 'blockart' ),
-				'menu_title' => __( 'Products', 'blockart' ),
+			),
+			'products'    => array(
+				'page_title' => __( 'Products', 'blockart-blocks' ),
+				'menu_title' => __( 'Products', 'blockart-blocks' ),
 				'position'   => 30,
-			],
-			'settings'    => [
-				'page_title' => __( 'Settings', 'blockart' ),
-				'menu_title' => __( 'Settings', 'blockart' ),
+			),
+			'settings'    => array(
+				'page_title' => __( 'Settings', 'blockart-blocks' ),
+				'menu_title' => __( 'Settings', 'blockart-blocks' ),
 				'position'   => 40,
-			],
-			'free-vs-pro' => [
-				'page_title' => __( 'Free Vs Pro', 'magazine-blocks' ),
-				'menu_title' => __( 'Free Vs Pro', 'magazine-blocks' ),
+			),
+			'free-vs-pro' => array(
+				'page_title' => __( 'Free Vs Pro', 'blockart-blocks' ),
+				'menu_title' => __( 'Free Vs Pro', 'blockart-blocks' ),
 				'position'   => 45,
-			],
-			'help'        => [
-				'page_title' => __( 'Help', 'blockart' ),
-				'menu_title' => __( 'Help', 'blockart' ),
+			),
+			'help'        => array(
+				'page_title' => __( 'Help', 'blockart-blocks' ),
+				'menu_title' => __( 'Help', 'blockart-blocks' ),
 				'position'   => 50,
-			],
-		];
+			),
+		);
 
 		$submenus = apply_filters( 'blockart_admin_submenus', $submenus );
 		$submenus = array_map(
@@ -133,7 +133,7 @@ class Admin {
 						'parent_slug' => 'blockart',
 						'capability'  => 'manage_options',
 						'position'    => 1000,
-						'callback'    => [ $this, 'markup' ],
+						'callback'    => array( $this, 'markup' ),
 					)
 				);
 			},
@@ -173,7 +173,7 @@ class Admin {
 			return $text;
 		}
 
-		return __( 'Thank you for creating with BlockArt Blocks.', 'blockart' );
+		return __( 'Thank you for creating with BlockArt Blocks.', 'blockart-blocks' );
 	}
 
 	/**
@@ -184,7 +184,7 @@ class Admin {
 	 * @return string Version text.
 	 */
 	public function admin_footer_version( string $version ): string {
-		return 'toplevel_page_blockart' !== get_current_screen()->id ? $version : __( 'Version ', 'blockart' ) . BLOCKART_VERSION;
+		return 'toplevel_page_blockart' !== get_current_screen()->id ? $version : __( 'Version ', 'blockart-blocks' ) . BLOCKART_VERSION;
 	}
 
 	/**
@@ -206,7 +206,7 @@ class Admin {
 	public function hide_admin_notices() {
 
 		// Bail if we're not on a BlockArt screen or page.
-		if ( empty( $_REQUEST['page'] ) || false === strpos( sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ), 'blockart' ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		if ( empty( $_REQUEST['page'] ) || false === strpos( sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ), 'blockart-blocks' ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			return;
 		}
 

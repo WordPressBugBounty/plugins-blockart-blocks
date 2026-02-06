@@ -27,7 +27,7 @@ class TableOfContents extends AbstractBlock {
 	 * @return array
 	 */
 	protected function get_default_html_attrs() {
-		return [
+		return array(
 			'id'             => $this->get_attribute( 'cssID' ),
 			'class'          => $this->cn(
 				"blockart-toc blockart-toc-{$this->get_attribute( 'clientId', '', true )}",
@@ -36,7 +36,7 @@ class TableOfContents extends AbstractBlock {
 			),
 			'data-collapsed' => $this->get_attribute( 'collapsible', false ) ? ( $this->get_attribute( 'initiallyCollapsed', false ) ? 'true' : 'false' ) : null,
 			'data-toc'       => "_blockart_toc_{$this->get_attribute('clientId', '')}",
-		];
+		);
 	}
 
 	/**
@@ -64,8 +64,8 @@ class TableOfContents extends AbstractBlock {
 							<?php
 							if ( 'svg' !== $this->get_attribute( 'iconType', '' ) ) {
 								?>
-								<span class="blockart-toc-open-icon"><?php esc_html_e( 'Hide', 'blockart' ); ?></span>
-								<span class="blockart-toc-close-icon"><?php esc_html_e( 'Show', 'blockart' ); ?></span>
+								<span class="blockart-toc-open-icon"><?php esc_html_e( 'Hide', 'blockart-blocks' ); ?></span>
+								<span class="blockart-toc-close-icon"><?php esc_html_e( 'Show', 'blockart-blocks' ); ?></span>
 								<?php
 							} else {
 								blockart_get_icon(
@@ -93,7 +93,7 @@ class TableOfContents extends AbstractBlock {
 				<?php if ( $headings ) : ?>
 					<?php $this->headings_list_html( $this->transform_single_level_headings_to_nested( $headings ) ); ?>
 				<?php else : ?>
-					<p><?php esc_html_e( 'Begin adding Headings to create a table of contents.', 'blockart' ); ?></p>
+					<p><?php esc_html_e( 'Begin adding Headings to create a table of contents.', 'blockart-blocks' ); ?></p>
 				<?php endif; ?>
 			</div>
 		</div>

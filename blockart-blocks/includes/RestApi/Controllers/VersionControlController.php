@@ -58,7 +58,7 @@ class VersionControlController extends \WP_REST_Controller {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+				esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}

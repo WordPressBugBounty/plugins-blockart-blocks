@@ -1,4 +1,16 @@
 == Changelog ==
+= 2.2.15 - 29-01-2026 =
+* Fix 	 - Sanitization and escaping of the counter block.
+
+= 2.2.14 - 28-11-2025 =
+* Fix 	 - Sanitization and escaping of the timestamp in frontend.
+
+= 2.2.13 - 04-11-2025 =
+* Update - Readme text.
+
+= 2.2.12 - 15-10-2025 =
+* Added - Show default theme color pallete on color picker.
+
 = 2.2.11 - 23-08-2025 =
 * Update - Block settings turned on in the dashboard.
 

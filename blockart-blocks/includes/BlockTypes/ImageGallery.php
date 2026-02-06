@@ -33,7 +33,7 @@ class ImageGallery extends AbstractBlock {
 			return $content;
 		}
 		$layout_type = $this->get_attribute( 'layoutType', 'grid' );
-		$images      = $this->get_attribute( 'images', [] );
+		$images      = $this->get_attribute( 'images', array() );
 		if ( empty( $images ) ) {
 			return '';
 		}
@@ -54,9 +54,9 @@ class ImageGallery extends AbstractBlock {
 			'speed'         => $this->get_attribute( 'speed', 800 ),
 		);
 
-		$swiper_data_attr = [
+		$swiper_data_attr = array(
 			'data-swiper' => wp_json_encode(
-				[
+				array(
 					'slidesPerView' => $this->get_attribute( 'perPage', 1 ),
 					'loop'          => $this->get_attribute( 'loop', false ),
 					'navigation'    => $this->get_attribute( 'arrows', false ),
@@ -67,14 +67,14 @@ class ImageGallery extends AbstractBlock {
 					'imgWidth'      => $this->get_attribute( 'imgWidth' ),
 					'imgGap'        => $this->get_attribute( 'imgGap' ),
 					'interval'      => $this->get_attribute( 'interval', false ),
-				]
+				)
 			),
 			'class'       => $this->cn(
 				$layout_type ? "blockart-$layout_type" : '',
 				$columns && $layout_type ? "blockart-$layout_type-$columns" : '',
 				$on_click_image ? "blockart-$on_click_image" : '',
 			),
-		];
+		);
 		ob_start();
 		?>
 		<div <?php $this->build_html_attributes( true ); ?>>
@@ -121,22 +121,22 @@ class ImageGallery extends AbstractBlock {
 	}
 
 	protected function render_image_gallery( $is_carousel = false ) {
-		$images             = $this->get_attribute( 'images', [] );
+		$images             = $this->get_attribute( 'images', array() );
 		$enable_caption     = $this->get_attribute( 'enableCaption', false );
 		$caption_layout     = $this->get_attribute( 'captionLayout', 'overlay' );
 		$caption_visibility = $this->get_attribute( 'captionVisibility', 'show-on-hover' );
 		$caption_position   = $this->get_attribute( 'captionPosition', 'center-center' );
-		$caption_texts      = $this->get_attribute( 'captionText', [] );
+		$caption_texts      = $this->get_attribute( 'captionText', array() );
 		?>
 		<?php
 		foreach ( $images as $i => $image ) :
 			$caption_wrapper_class = $this->cn(
 				'blockart-caption-wrapper',
-				[
-					"blockart-$caption_layout"     => ! ! $caption_layout,
-					"blockart-$caption_visibility" => ! ! $caption_visibility,
-					"blockart-$caption_position"   => ! ! $caption_position,
-				]
+				array(
+					"blockart-$caption_layout"     => (bool) $caption_layout,
+					"blockart-$caption_visibility" => (bool) $caption_visibility,
+					"blockart-$caption_position"   => (bool) $caption_position,
+				)
 			);
 			?>
 			<?php $is_carousel && print( '<div class="swiper-slide">' ); ?>
@@ -145,7 +145,7 @@ class ImageGallery extends AbstractBlock {
 						<img src="<?php echo esc_url( $image['url'] ?? '' ); ?>" alt="<?php echo esc_url( $image['alt'] ?? '' ); ?>">
 						<?php if ( $enable_caption ) : ?>
 							<div class="<?php echo esc_attr( $caption_wrapper_class ); ?>">
-								<figcaption><?php echo esc_html( $caption_texts[ $i ] ?? __( 'No caption', 'blockart' ) ); ?></figcaption>
+								<figcaption><?php echo esc_html( $caption_texts[ $i ] ?? __( 'No caption', 'blockart-blocks' ) ); ?></figcaption>
 							</div>
 						<?php endif; ?>
 					</figure>

@@ -86,7 +86,7 @@ class ChangelogController extends \WP_REST_Controller {
 
 		$data = array_search( $request['version'], array_column( $changelog, 'version' ), true );
 		if ( false === $data ) {
-			return new \WP_Error( 'changelog_not_found', esc_html__( 'Changelog not found.', 'blockart' ) );
+			return new \WP_Error( 'changelog_not_found', esc_html__( 'Changelog not found.', 'blockart-blocks' ) );
 		}
 		$data = $changelog[ $data ];
 		return $this->prepare_item_for_response( $data, $request );
@@ -103,7 +103,7 @@ class ChangelogController extends \WP_REST_Controller {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return new \WP_Error(
 				'rest_forbidden',
-				esc_html__( 'You are not allowed to access this resource.', 'blockart' ),
+				esc_html__( 'You are not allowed to access this resource.', 'blockart-blocks' ),
 				array( 'status' => rest_authorization_required_code() )
 			);
 		}
@@ -139,17 +139,17 @@ class ChangelogController extends \WP_REST_Controller {
 		$filesystem = blockart_get_filesystem();
 
 		if ( ! $filesystem ) {
-			return new \WP_Error( 'filesystem_error', esc_html__( 'Could not access filesystem.', 'blockart' ) );
+			return new \WP_Error( 'filesystem_error', esc_html__( 'Could not access filesystem.', 'blockart-blocks' ) );
 		}
 
 		if ( ! $filesystem->exists( $changelog_file ) ) {
-			return new \WP_Error( 'changelog_not_found', esc_html__( 'Changelog not found.', 'blockart' ) );
+			return new \WP_Error( 'changelog_not_found', esc_html__( 'Changelog not found.', 'blockart-blocks' ) );
 		}
 
 		$raw_changelog = $filesystem->get_contents( $changelog_file );
 
 		if ( ! $raw_changelog ) {
-			return new \WP_Error( 'changelog_read_error', esc_html__( 'Failed to read changelog.', 'blockart' ) );
+			return new \WP_Error( 'changelog_read_error', esc_html__( 'Failed to read changelog.', 'blockart-blocks' ) );
 		}
 
 		return $raw_changelog;

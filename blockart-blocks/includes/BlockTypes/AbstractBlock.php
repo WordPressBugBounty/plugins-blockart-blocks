@@ -66,7 +66,7 @@ abstract class AbstractBlock {
 	 */
 	protected function register() {
 		if ( empty( $this->block_name ) ) {
-			_doing_it_wrong( __CLASS__, esc_html__( 'Block name is not set.', 'blockart' ), '2.0.7.3' );
+			_doing_it_wrong( __CLASS__, esc_html__( 'Block name is not set.', 'blockart-blocks' ), '2.0.7.3' );
 			return;
 		}
 
@@ -76,7 +76,7 @@ abstract class AbstractBlock {
 			_doing_it_wrong(
 				__CLASS__,
 				/* Translators: 1: Block name */
-				esc_html( sprintf( __( 'Metadata file for %s block does not exist.', 'blockart' ), $this->block_name ) ),
+				esc_html( sprintf( __( 'Metadata file for %s block does not exist.', 'blockart-blocks' ), $this->block_name ) ),
 				'2.0.7.3'
 			);
 			return;
@@ -214,13 +214,13 @@ abstract class AbstractBlock {
 	 * @return array
 	 */
 	protected function get_default_html_attrs() {
-		return [
+		return array(
 			'id'    => $this->get_attribute( 'cssID', '', true ),
 			'class' => $this->cn(
 				"blockart-$this->block_name blockart-$this->block_name-{$this->get_attribute('clientId', '', true)}",
 				$this->get_attribute( 'className', '' ),
 			),
-		];
+		);
 	}
 
 	/**
