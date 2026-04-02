@@ -64,8 +64,8 @@ class PostTemplate extends AbstractBlock {
 
 		$classes = array(
 			'blockart-post-template',
-			'blockart-post-template-' . $attributes['clientId'],
-			'columns-' . $attributes['columns'],
+			'blockart-post-template-' . esc_attr( $attributes['clientId'] ),
+			'columns-' . absint( $attributes['columns'] ),
 		);
 
 		$block_content = sprintf(

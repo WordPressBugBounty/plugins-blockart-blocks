@@ -302,6 +302,9 @@
         }
       ]
     },
+    "link": {
+      "type": "object"
+    },
     "blockMargin": {
       "type": "object",
       "default": {

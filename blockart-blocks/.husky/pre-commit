@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Check for error_log and print_r in PHP staged files
+STAGED_PHP_FILES=$(git diff --cached --name-only --diff-filter=ACMR "*.php" | sed 's| |\\ |g')
+
+if [ -n "$STAGED_PHP_FILES" ]; then
+  echo "Checking staged PHP files..."
+  grep -n -E -e "error_log\(" -e "print_r\(" -e "var_dump\(" $STAGED_PHP_FILES
+
+  if [ $? -eq 0 ]; then
+    echo "Debug code found in staged PHP files. Please review and remove any unnecessary debug statements before committing."
+    exit 1
+  fi
+fi

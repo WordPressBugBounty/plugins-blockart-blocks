@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 5.5
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.2.15
+Stable tag: 2.3.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -252,9 +252,15 @@ BlockArt Library is a collection of Sections, Starter Packs, and Templates that 
 Please report security bugs found in the source code of the BlockArt Blocks plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/9e5fbf7d-b1bc-412a-bb90-cea5402a81ec). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Changelog ==
+= 2.3.0 - 02-04-2026 =
+* Added - Tooltip option in paragraph block.
+* Added - URL option in section block.
+* Added - Rows and columns option in slider block.
+* Security - Fixed authenticated stored XSS vulnerability in post template and query loop block.
+* Tweak - Update google fonts.
 
 = 2.2.15 - 29-01-2026 =
-* Fix 	 - Sanitization and escaping of the counter block.
+* Fix    - Sanitization and escaping of the counter block.
 
 = 2.2.14 - 28-11-2025 =
 * Fix 	 - Sanitization and escaping of the timestamp in frontend.

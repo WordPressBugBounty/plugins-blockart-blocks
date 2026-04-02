@@ -32,13 +32,22 @@ class Slider extends AbstractBlock {
 	 */
 	public function build_html( $content ) {
 		if ( ! defined( 'REST_REQUEST' ) || ! REST_REQUEST ) {
+			$rows       = $this->get_attribute( 'rows', 1 );
+			$is_grid    = $rows > 1;
 			$html_attrs = blockart_build_html_attrs(
 				array(
 					'class'       => 'splide',
 					'data-splide' => wp_json_encode(
 						array(
-							'perPage'      => $this->get_attribute( 'perPage', 1 ),
-							'perMove'      => $this->get_attribute( 'perMove', 1 ),
+							'perPage'      => ! $is_grid ? $this->get_attribute( 'perPage', 1 ) : $this->get_attribute( 'columns', 1 ),
+							'perMove'      => ! $is_grid ? $this->get_attribute( 'perMove', 1 ) : $this->get_attribute( 'columns', 1 ),
+							'grid'         => ! $is_grid ? null : array(
+								'rows' => $rows,
+								'gap'  => array(
+									'row' => $this->get_attribute( 'spaceBetween', 10 )['value'] ?? 20,
+									'col' => $this->get_attribute( 'spaceBetween', 10 )['value'] ?? 20,
+								),
+							),
 							'autoplay'     => $this->get_attribute( 'autoplay', false ),
 							'pauseOnHover' => $this->get_attribute( 'pauseOnHover', false ),
 							'arrows'       => $this->get_attribute( 'arrows', true ),
@@ -48,19 +57,34 @@ class Slider extends AbstractBlock {
 							'interval'     => $this->get_attribute( 'interval', 5000 ),
 							'type'         => $this->get_attribute( 'loop', false ) ? 'loop' : 'slide',
 							'gap'          => $this->get_attribute( 'spaceBetween', 10 )['value'] ?? 20,
-							'breakpoints'  => array(
-								'640'  => array(
-									'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 2 ),
-								),
-								'768'  => array(
-									'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 1 ),
-									'perMove' => max( 1, $this->get_attribute( 'perMove', 1 ) - 1 ),
-								),
-								'1024' => array(
-									'perPage' => $this->get_attribute( 'perPage', 1 ),
-								),
+							'padding'      => array(
+								'left' => '1px',
 							),
-						)
+							'breakpoints'  =>
+								! $is_grid ? array(
+									'640'  => array(
+										'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 2 ),
+									),
+									'768'  => array(
+										'perPage' => max( 1, $this->get_attribute( 'perPage', 1 ) - 1 ),
+										'perMove' => max( 1, $this->get_attribute( 'perMove', 1 ) - 1 ),
+									),
+									'1024' => array(
+										'perPage' => $this->get_attribute( 'perPage', 1 ),
+									),
+								) : array(
+									'640'  => array(
+										'perPage' => max( 1, $this->get_attribute( 'columns', 1 ) - 2 ),
+									),
+									'768'  => array(
+										'perPage' => max( 1, $this->get_attribute( 'columns', 1 ) - 1 ),
+										'perMove' => max( 1, $this->get_attribute( 'columns', 1 ) - 1 ),
+									),
+									'1024' => array(
+										'perPage' => $this->get_attribute( 'columns', 1 ),
+									),
+								),
+						),
 					),
 				)
 			);

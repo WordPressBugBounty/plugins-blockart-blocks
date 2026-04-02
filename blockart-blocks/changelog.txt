@@ -1,6 +1,13 @@
 == Changelog ==
+= 2.3.0 - 02-04-2026 =
+* Added - Tooltip option in paragraph block.
+* Added - URL option in section block.
+* Added - Rows and columns option in slider block.
+* Security - Fixed authenticated stored XSS vulnerability in post template and query loop block.
+* Tweak - Update google fonts.
+
 = 2.2.15 - 29-01-2026 =
-* Fix 	 - Sanitization and escaping of the counter block.
+* Fix    - Sanitization and escaping of the counter block.
 
 = 2.2.14 - 28-11-2025 =
 * Fix 	 - Sanitization and escaping of the timestamp in frontend.

@@ -1,0 +1,8 @@
+/.* export-ignore
+/node_modules
+/src
+changelog.txt export-ignore
+composer.* export-ignore
+package.json export-ignore
+package-lock.json export-ignore
+README.md export-ignore

@@ -58,6 +58,14 @@
       "type": "boolean",
       "default": false
     },
+    "rows": {
+      "type": "number",
+      "default": 1
+    },
+    "columns": {
+      "type": "number",
+      "default": 1
+    },
     "perPage": {
       "type": "number",
       "default": 1

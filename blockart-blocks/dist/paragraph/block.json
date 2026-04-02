@@ -83,6 +83,81 @@
         }
       ]
     },
+    "enableTooltip": {
+      "type": "boolean",
+      "default": false
+    },
+    "tooltipContent": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+    },
+    "tooltipPosition": {
+      "type": "string",
+      "default": "right"
+    },
+    "tooltipTypography": {
+      "type": "object",
+      "default": {
+        "typography": 1
+      },
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content"
+        }
+      ]
+    },
+    "tooltipColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content {color: {{VALUE}}; }"
+        }
+      ]
+    },
+    "tooltipHoverColor": {
+      "type": "string",
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content:hover {color: {{VALUE}}; }"
+        }
+      ]
+    },
+    "tooltipBackground": {
+      "type": "object",
+      "default": {
+        "background": 1
+      },
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content, .blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content::before"
+        }
+      ]
+    },
+    "tooltipHoverBackground": {
+      "type": "object",
+      "default": {
+        "background": 1
+      },
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content:hover"
+        }
+      ]
+    },
+    "toolTipPadding": {
+      "type": "object",
+      "default": {
+        "dimension": 1,
+        "desktop": {
+          "lock": true
+        }
+      },
+      "style": [
+        {
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} .blockart-tooltip-content { padding: {{VALUE}}; }"
+        }
+      ]
+    },
     "margin": {
       "type": "object",
       "default": {
@@ -107,7 +182,24 @@
       },
       "style": [
         {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
           "selector": ".blockart-paragraph{{WRAPPER}} { margin: {{VALUE}}; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} { margin: {{VALUE}}; }"
         }
       ]
     },
@@ -121,7 +213,24 @@
       },
       "style": [
         {
-          "selector": "{{WRAPPER}} { padding: {{VALUE}}; }"
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
+          "selector": ".blockart-paragraph{{WRAPPER}} { padding: {{VALUE}}; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} { padding: {{VALUE}}; }"
         }
       ]
     },
@@ -129,7 +238,24 @@
       "type": "number",
       "style": [
         {
-          "selector": "{{WRAPPER}} { z-index: {{VALUE}}; }"
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
+          "selector": ".blockart-paragraph{{WRAPPER}} { z-index: {{VALUE}}; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": ".blockart-paragraph-wrapper{{WRAPPER}} { z-index: {{VALUE}}; }"
         }
       ]
     },
@@ -149,7 +275,24 @@
       "type": "boolean",
       "style": [
         {
-          "selector": "@media (min-width:62em) { {{WRAPPER}} { display: none; } }"
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
+          "selector": "@media (min-width:62em) { .blockart-paragraph{{WRAPPER}} { display: none; } }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": "@media (min-width:62em) { .blockart-paragraph-wrapper{{WRAPPER}} { display: none; } }"
         }
       ]
     },
@@ -157,7 +300,24 @@
       "type": "boolean",
       "style": [
         {
-          "selector": "@media (min-width:48em) and (max-width:62em) { {{WRAPPER}} { display: none; } }"
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
+          "selector": "@media (min-width:48em) and (max-width:62em) { .blockart-paragraph{{WRAPPER}} { display: none; } }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": "@media (min-width:48em) and (max-width:62em) { .blockart-paragraph-wrapper{{WRAPPER}} { display: none; } }"
         }
       ]
     },
@@ -165,7 +325,24 @@
       "type": "boolean",
       "style": [
         {
-          "selector": "@media (max-width:48em) { {{WRAPPER}} { display: none; } }"
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": false
+            }
+          ],
+          "selector": "@media (max-width:48em) { .blockart-paragraph{{WRAPPER}} { display: none; } }"
+        },
+        {
+          "condition": [
+            {
+              "key": "enableTooltip",
+              "relation": "==",
+              "value": true
+            }
+          ],
+          "selector": "@media (max-width:48em) { .blockart-paragraph-wrapper{{WRAPPER}} { display: none; } }"
         }
       ]
     },

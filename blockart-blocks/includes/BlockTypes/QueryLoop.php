@@ -40,7 +40,7 @@ class QueryLoop extends AbstractBlock {
 
 		return sprintf(
 			$format,
-			'blockart-query-loop blockart-query-loop-' . $attributes['clientId'],
+			esc_attr( 'blockart-query-loop blockart-query-loop-' . $attributes['clientId'] ),
 			$content
 		);
 	}
