@@ -1,8 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/map",
   "title": "Google Map",
-  "description": "Google Map blocks allows you to add maps.",
+  "description": "Google Map block allows you to add maps.",
   "keywords": [
     "map"
   ],

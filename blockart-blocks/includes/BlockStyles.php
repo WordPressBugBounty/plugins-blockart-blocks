@@ -299,7 +299,7 @@ class BlockStyles extends Styles {
 			if ( 'none' !== $style ) {
 				$css['desktop'][ $selector ]['border-style'] = $style;
 
-				if ( isset( $value['color'] ) ) {
+				if ( isset( $value['color'] ) && is_scalar( $value['color'] ) ) {
 					$css['desktop'][ $selector ]['border-color'] = $value['color'];
 				}
 
@@ -445,12 +445,12 @@ class BlockStyles extends Styles {
 			}
 			$selector = str_replace( '{{WRAPPER}}', $wrapper_class, $style_def['selector'] );
 
-			if ( 'gradient' === $type && isset( $value['gradient'] ) ) {
+			if ( 'gradient' === $type && isset( $value['gradient'] ) && is_scalar( $value['gradient'] ) ) {
 				$css['desktop'][ $selector ]['background'] = $value['gradient'];
 				continue;
 			}
 
-			if ( isset( $value['color'] ) ) {
+			if ( isset( $value['color'] ) && is_scalar( $value['color'] ) ) {
 				$css['desktop'][ $selector ]['background-color'] = $value['color'];
 			}
 

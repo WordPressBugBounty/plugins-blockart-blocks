@@ -1,5 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
     "name": "blockart/price-list",
     "title": "Price Lists",
     "description": "Price Lists.",
@@ -18,7 +19,8 @@
         "type": "string"
       },
       "columns":{
-        "type":"number"
+        "type":"number",
+        "default": 3
       },
       "typography": {
         "type": "object",

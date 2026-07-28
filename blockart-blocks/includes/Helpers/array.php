@@ -6,7 +6,9 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	return;
+}
 
 /**
  * Determine whether the given value is array accessible.
@@ -179,7 +181,7 @@ function blockart_array_first( $array_value, $callback = null, $default_value = 
  * @param mixed         $default_value Default.
  * @return mixed
  */
-function blockart_array_last( array $array_value, callable $callback = null, $default_value = null ) {
+function blockart_array_last( array $array_value, ?callable $callback = null, $default_value = null ) {
 	if ( is_null( $callback ) ) {
 		return empty( $array_value ) ? blockart_value( $default_value ) : end( $array_value );
 	}
@@ -470,7 +472,7 @@ function blockart_array_set( &$array_value, $key, $value ): array {
  * @param int|null $seed Seed.
  * @return array
  */
-function blockart_array_shuffle( array $array_value, int $seed = null ): array {
+function blockart_array_shuffle( array $array_value, ?int $seed = null ): array {
 	if ( is_null( $seed ) ) {
 		shuffle( $array_value );
 	} else {

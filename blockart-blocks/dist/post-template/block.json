@@ -1,5 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
     "name": "blockart/post-template",
     "title": "Post Template",
     "description": "Post template block to display post list.",
@@ -96,7 +97,7 @@
             },
             "style": [
                 {
-                    "selector": ".blockart-post-template{{WRAPPER}}"
+                    "selector": "{{WRAPPER}} li.wp-block-post"
                 }
             ]
         },
@@ -107,7 +108,7 @@
             },
             "style": [
                 {
-                    "selector": ".blockart-post-template{{WRAPPER}}:hover"
+                    "selector": "{{WRAPPER}} li.wp-block-post:hover"
                 }
             ]
         },
@@ -115,20 +116,32 @@
             "type": "object",
             "default": {
                 "border": 1,
-                "radius": {
-                    "desktop": {
-                        "lock": true
-                    }
-                },
+                "type": "solid",
+                "color": "#E2E8F0",
                 "size": {
                     "desktop": {
-                        "lock": true
+                        "lock": true,
+                        "top": 1,
+                        "right": 1,
+                        "bottom": 1,
+                        "left": 1,
+                        "unit": "px"
+                    }
+                },
+                "radius": {
+                    "desktop": {
+                        "lock": true,
+                        "top": 4,
+                        "right": 4,
+                        "bottom": 4,
+                        "left": 4,
+                        "unit": "px"
                     }
                 }
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}}"
+                    "selector": "{{WRAPPER}} li.wp-block-post"
                 }
             ]
         },
@@ -149,7 +162,29 @@
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}}:hover"
+                    "selector": "{{WRAPPER}} li.wp-block-post:hover"
+                }
+            ]
+        },
+        "boxShadow": {
+            "type": "object",
+            "default": {
+                "boxShadow": 1
+            },
+            "style": [
+                {
+                    "selector": "{{WRAPPER}} li.wp-block-post"
+                }
+            ]
+        },
+        "boxShadowHover": {
+            "type": "object",
+            "default": {
+                "boxShadow": 1
+            },
+            "style": [
+                {
+                    "selector": "{{WRAPPER}} li.wp-block-post:hover"
                 }
             ]
         },

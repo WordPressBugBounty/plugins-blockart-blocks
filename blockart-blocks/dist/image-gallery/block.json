@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/image-gallery",
   "title": "Image Gallery",
   "description": "Create customizable gallery of multiple images.",

@@ -163,7 +163,7 @@ class ScriptStyle {
 				'src'     => self::get_asset_url( "$view_script.js", false ),
 				'deps'    => array_merge(
 					array( 'blockart-frontend-common' ),
-					'map' === $view_script ? array( 'blockart-google-maps' ) : array(),
+					'map' === $view_script && $map_api_key ? array( 'blockart-google-maps' ) : array(),
 					'image-gallery' === $view_script ? array( 'swiper' ) : array(),
 					'image-comparison' === $view_script ? array( 'blockart-dics' ) : array()
 				),

@@ -146,20 +146,22 @@ class TableOfContents extends AbstractBlock {
 			return false;
 		}
 
-		return array_filter(
-			array_map(
-				function ( $heading ) {
-						preg_match( '/<h([1-6])[^>]*>(.*?)<\/h[1-6]>/i', $heading, $heading_matches );
-					if ( count( $heading_matches ) !== 3 || empty( $heading_matches[2] ) ) {
-						return false;
-					}
-						return array(
-							'content' => wp_strip_all_tags( $heading_matches[2] ),
-							'level'   => intval( $heading_matches[1] ),
-							'id'      => blockart_string_to_kebab( $heading_matches[2] ),
-						);
-				},
-				$matches[0]
+		return array_values(
+			array_filter(
+				array_map(
+					function ( $heading ) {
+							preg_match( '/<h([1-6])[^>]*>(.*?)<\/h[1-6]>/i', $heading, $heading_matches );
+						if ( count( $heading_matches ) !== 3 || empty( $heading_matches[2] ) ) {
+							return false;
+						}
+							return array(
+								'content' => wp_strip_all_tags( $heading_matches[2] ),
+								'level'   => intval( $heading_matches[1] ),
+								'id'      => blockart_string_to_kebab( $heading_matches[2] ),
+							);
+					},
+					$matches[0]
+				)
 			)
 		);
 	}

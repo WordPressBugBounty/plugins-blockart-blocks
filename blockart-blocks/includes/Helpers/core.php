@@ -7,7 +7,9 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	return;
+}
 
 /**
  * Get the direct filesystem object.
@@ -334,7 +336,7 @@ function blockart_string_to_kebab( $val ) {
 /**
  * Build html attributes from array.
  *
- * @param array $attributes
+ * @param array   $attributes
  * @param boolean $echo
  * @return string
  */
@@ -438,8 +440,8 @@ function blockart_bool_to_string( $bool_val ) {
 /**
  * Get webfont url.
  *
- * @param string $url Remote webfont url.
- * @param string $format Font format.
+ * @param string  $url Remote webfont url.
+ * @param string  $format Font format.
  * @param boolean $preload Preload font.
  * @return void
  */

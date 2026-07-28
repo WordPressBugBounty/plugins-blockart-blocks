@@ -73,7 +73,8 @@ class Admin {
 				$submenu['page_title'],
 				$submenu['menu_title'],
 				$submenu['capability'],
-				'blockart#/' . $slug,
+				// Bare parent slug for dashboard overrides WP's auto-added duplicate submenu, which stays permanently "current" otherwise.
+				'dashboard' === $slug ? 'blockart' : 'blockart#/' . $slug,
 				$submenu['callback'],
 				$submenu['position']
 			);
@@ -169,7 +170,8 @@ class Admin {
 	 * @return string Admin footer text.
 	 */
 	public function admin_footer_text( string $text ): string {
-		if ( 'toplevel_page_blockart' !== get_current_screen()->id ) {
+		$screen = get_current_screen();
+		if ( null === $screen || 'toplevel_page_blockart' !== $screen->id ) {
 			return $text;
 		}
 
@@ -184,7 +186,11 @@ class Admin {
 	 * @return string Version text.
 	 */
 	public function admin_footer_version( string $version ): string {
-		return 'toplevel_page_blockart' !== get_current_screen()->id ? $version : __( 'Version ', 'blockart-blocks' ) . BLOCKART_VERSION;
+		$screen = get_current_screen();
+		if ( null === $screen || 'toplevel_page_blockart' !== $screen->id ) {
+			return $version;
+		}
+		return __( 'Version ', 'blockart-blocks' ) . BLOCKART_VERSION;
 	}
 
 	/**

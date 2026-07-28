@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/faq",
   "title": "FAQ",
   "description": "Display Frequently Asked Questions as an accordion.",

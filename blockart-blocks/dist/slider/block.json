@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/slider",
   "title": "Slider",
   "description": "Create a slider with multiple slides.",

@@ -1,4 +1,26 @@
 == Changelog ==
+= 2.4.0 - 28-07-2026 =
+* Added - Column count controls and toolbar Add Column button to Section block.
+* Added - Pagination support to Button block for use with Query Loop.
+* Added - Style tab controls (Background/Border) to Query Loop and Post Template blocks.
+* Added - Editor-preview parity notice to Lottie block panel.
+* Enhancement - Migrated all blocks to the latest block API version for better compatibility with the WordPress block editor.
+* Enhancement - General code quality, PHP 8.4 compatibility, and minor block display fixes across the plugin.
+* Enhancement - Lottie block playback functionality (Play On, hover, and delay triggers) to match frontend behavior.
+* Enhancement - Query Loop block functionality and reliability.
+* Fix - Section block's row appender inserting the wrong block instead of opening the block picker.
+* Fix - Column gap padding overflowing column width and breaking RTL layouts on frontend.
+* Fix - Border, background color and gradient controls breaking on malformed attribute data.
+* Fix - Double-escaped RichText attributes breaking imports from BlockArt Library.
+* Fix - FAQ block throwing a React error during render.
+* Fix - Image drag-ghost and stuck slider-track dragging in editor for Slider and Testimonial blocks.
+* Fix - Image Comparison block's upload placeholder not responding to clicks.
+* Fix - Google Maps script dependency notice when API key isn't set.
+* Fix - List view selected block icon color.
+* Fix - Fatal error in admin footer hooks when screen isn't set yet.
+* Fix - BlockArt admin submenu item staying permanently highlighted.
+* Fix - Section block's "View Templates" button not opening the library.
+
 = 2.3.0 - 02-04-2026 =
 * Added - Tooltip option in paragraph block.
 * Added - URL option in section block.

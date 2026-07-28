@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/button",
   "title": "Buttons",
   "description": "Redirect users to your important pages or websites by clicking button.",
@@ -11,12 +12,21 @@
     "customClassName": false,
     "html": false
   },
+  "usesContext": [
+    "blockart/queryId",
+    "query",
+    "queryArgs"
+  ],
   "example": {
     "attributes": {}
   },
   "attributes": {
     "clientId": {
       "type": "string"
+    },
+    "isPagination": {
+      "type": "boolean",
+      "default": false
     },
     "justification": {
       "type": "object"

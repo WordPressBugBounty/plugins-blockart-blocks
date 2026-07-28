@@ -1,9 +1,9 @@
 {
-  "apiVersion": 2,
+  "apiVersion": 3,
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "name": "blockart/info",
   "title": "Info Box",
-  "description": "Redirect users to your important pages or websites by clicking button.",
+  "description": "Highlight important information with an icon, title, and description.",
   "keywords": ["info"],
   "category": "blockart",
   "textdomain": "blockart",

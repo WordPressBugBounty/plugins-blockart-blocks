@@ -32,15 +32,34 @@ class QueryLoop extends AbstractBlock {
 	 * @return string
 	 */
 	public function render( $attributes, $content, $block ) {
+		// Populate $this->attributes so get_attribute() reads saved block data.
+		$this->attributes = $attributes;
+		$this->block      = $block;
+		$this->content    = $content;
+
 		if ( blockart_is_rest_request() ) {
 			return $content;
 		}
 
-		$format = '<div class="%s">%s</div>';
+		$classes = array(
+			'blockart-query-loop',
+			'blockart-query-loop-' . $this->get_attribute( 'clientId', '', true ),
+		);
+
+		if ( ! empty( $attributes['className'] ) ) {
+			$classes[] = $attributes['className'];
+		}
+
+		if ( ! empty( $attributes['align'] ) ) {
+			$classes[] = 'align' . $attributes['align'];
+		}
+
+		$id_attr = ! empty( $attributes['cssID'] ) ? sprintf( ' id="%s"', esc_attr( $attributes['cssID'] ) ) : '';
 
 		return sprintf(
-			$format,
-			esc_attr( 'blockart-query-loop blockart-query-loop-' . $attributes['clientId'] ),
+			'<div class="%s"%s>%s</div>',
+			esc_attr( implode( ' ', $classes ) ),
+			$id_attr,
 			$content
 		);
 	}

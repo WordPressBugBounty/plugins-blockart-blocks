@@ -50,17 +50,15 @@ class PostTemplate extends AbstractBlock {
 							array(
 								'postType'         => get_post_type(),
 								'postId'           => get_the_ID(),
-								'blockart/queryId' => $block->context['blockart/queryId'],
+								'blockart/queryId' => $block->context['blockart/queryId'] ?? null,
 							)
 						)
 					)->render( array( 'dynamic' => false ) );
 
-					$inner_content .= '<li>' . $post_content . '</li>';
+					$inner_content .= '<li class="wp-block-post">' . $post_content . '</li>';
 				}
 			}
 		}
-
-		$format = '<ul class="%s">%s</ul>';
 
 		$classes = array(
 			'blockart-post-template',
@@ -68,13 +66,18 @@ class PostTemplate extends AbstractBlock {
 			'columns-' . absint( $attributes['columns'] ),
 		);
 
-		$block_content = sprintf(
-			$format,
-			implode( ' ', $classes ),
+		if ( ! empty( $attributes['className'] ) ) {
+			$classes[] = $attributes['className'];
+		}
+
+		$id_attr = ! empty( $attributes['cssID'] ) ? sprintf( ' id="%s"', esc_attr( $attributes['cssID'] ) ) : '';
+
+		return sprintf(
+			'<ul class="%s"%s>%s</ul>',
+			esc_attr( implode( ' ', $classes ) ),
+			$id_attr,
 			$inner_content
 		);
-
-		return $block_content;
 	}
 
 
@@ -94,7 +97,7 @@ class PostTemplate extends AbstractBlock {
 
 		foreach ( $raw_args as $key => $value ) {
 			// Do not pass empty args.
-			if ( ! $value || ! in_array( $key, array_merge( $args_list, array( 'post_type', 'per_page', 'inherit' ) ) ) ) {
+			if ( ! $value || ! in_array( $key, array_merge( $args_list, array( 'post_type', 'per_page', 'inherit', 'orderby' ) ) ) ) {
 				continue;
 			}
 

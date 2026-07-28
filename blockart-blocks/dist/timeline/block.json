@@ -1,12 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/timeline",
   "title": "Timeline",
-  "description": "Display Frequently Asked Titles as an accordion.",
+  "description": "Showcase a sequence of events or milestones in chronological order.",
   "keywords": [
     "timeline",
-    "accordion",
-    "title"
+    "history",
+    "milestone"
   ],
   "category": "blockart",
   "textdomain": "blockart",

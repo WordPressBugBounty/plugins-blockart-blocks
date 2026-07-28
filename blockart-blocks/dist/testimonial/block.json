@@ -1,8 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/testimonial",
   "title": "Testimonial",
-  "description": "Create a slider with multiple testimonial.",
+  "description": "Create a slider with multiple testimonials.",
   "keywords": [
     "testimonial"
   ],

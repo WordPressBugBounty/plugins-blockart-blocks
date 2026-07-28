@@ -1,8 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/countdown",
   "title": "Countdown",
-  "description": "Countdown.",
+  "description": "Display a countdown timer to a specific date and time.",
   "keywords": [
     "count",
     "countdown"

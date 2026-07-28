@@ -1,8 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/progress",
   "title": "Progress",
-  "description": "Customize typography and style paragraphs with multiple setting options.",
+  "description": "Display a progress bar to visually represent completion or skill level.",
   "keywords": ["progress", "bar"],
   "category": "blockart",
   "textdomain": "blockart",

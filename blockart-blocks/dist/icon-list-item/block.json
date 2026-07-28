@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/icon-list-item",
   "title": "Icon List Item",
   "description": "Create a list with icons.",
@@ -14,7 +15,8 @@
   ],
   "supports": {
     "className": false,
-    "customClassName": false
+    "customClassName": false,
+    "splitting": true
   },
   "example": {
     "attributes": {}

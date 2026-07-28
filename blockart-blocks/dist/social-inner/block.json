@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/social-inner",
   "title": "Social Icon",
   "description": "Share your content through different platforms.",

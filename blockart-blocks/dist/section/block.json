@@ -1,5 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "blockart/section",
   "title": "Section",
   "description": "Add Rows and Columns inside rows to create various layouts.",
@@ -115,7 +116,7 @@
       },
       "style": [
         {
-          "selector": "{{WRAPPER}} > [class*=\"blockart-container\"] > .blockart-section-inner { --colSpacing: {{VALUE}}; margin-left: calc(var(--colSpacing) * -1) }"
+          "selector": "{{WRAPPER}} > [class*=\"blockart-container\"] > .blockart-section-inner { --colSpacing: {{VALUE}}; margin-inline-start: calc(var(--colSpacing) * -1) }"
         }
       ]
     },

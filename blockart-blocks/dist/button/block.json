@@ -1,18 +1,14 @@
 {
-  "apiVersion": 2,
+  "apiVersion": 3,
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "name": "blockart/button-inner",
   "title": "Button",
   "description": "Redirect users to your important pages or websites by clicking button.",
-  "keywords": [
-    "button",
-    "icon"
-  ],
+  "keywords": ["button", "icon"],
   "category": "blockart",
   "textdomain": "blockart",
-  "parent": [
-    "blockart/button"
-  ],
+  "parent": ["blockart/button"],
+  "usesContext": ["blockart/queryId", "query", "queryArgs"],
   "supports": {
     "className": false,
     "customClassName": false,
@@ -49,6 +45,13 @@
       "type": "object"
     },
     "text": {
+      "type": "string"
+    },
+    "isPagination": {
+      "type": "boolean",
+      "default": false
+    },
+    "paginationAction": {
       "type": "string"
     },
     "style": {
@@ -214,7 +217,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link:hover { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:hover .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active .blockart-button-icon .blockart-icon { fill: {{VALUE}} }"
+          "selector": "{{WRAPPER}} .blockart-button-link:hover { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:hover .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link.is-active { color: {{VALUE}} }"
         }
       ]
     },
@@ -230,7 +233,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link:hover { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:hover .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active .blockart-button-icon .blockart-icon { fill: {{VALUE}} }"
+          "selector": "{{WRAPPER}} .blockart-button-link:hover { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:hover .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:focus .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active { color: {{VALUE}} }{{WRAPPER}} .blockart-button-link:active .blockart-button-icon .blockart-icon { fill: {{VALUE}} }{{WRAPPER}} .blockart-button-link.is-active { color: {{VALUE}} }"
         }
       ]
     },
@@ -286,7 +289,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active"
+          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active, {{WRAPPER}} .blockart-button-link.is-active"
         }
       ]
     },
@@ -304,7 +307,7 @@
               "value": "outline"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link.is-style-outline:hover, {{WRAPPER}} .blockart-button-link.is-style-outline:focus, {{WRAPPER}} .blockart-button-link.is-style-outline:active"
+          "selector": "{{WRAPPER}} .blockart-button-link.is-style-outline:hover, {{WRAPPER}} .blockart-button-link.is-style-outline:focus, {{WRAPPER}} .blockart-button-link.is-style-outline:active, {{WRAPPER}} .blockart-button-link.is-style-outline.is-active"
         }
       ]
     },
@@ -360,7 +363,7 @@
               "value": "filled"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active"
+          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active, {{WRAPPER}} .blockart-button-link.is-active"
         }
       ]
     },
@@ -428,7 +431,7 @@
               "value": "outline"
             }
           ],
-          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active"
+          "selector": "{{WRAPPER}} .blockart-button-link:hover, {{WRAPPER}} .blockart-button-link:focus, {{WRAPPER}} .blockart-button-link:active, {{WRAPPER}} .blockart-button-link.is-active"
         }
       ]
     },

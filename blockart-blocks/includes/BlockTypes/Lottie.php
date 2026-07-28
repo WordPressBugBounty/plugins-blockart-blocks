@@ -24,13 +24,25 @@ class Lottie extends AbstractBlock {
 	/**
 	 * Render callback.
 	 *
+	 * @param string $content Block content.
+	 *
 	 * @return string
 	 */
 	public function build_html( $content ) {
+		// A falsy value is treated as 'auto' so it can never serialize without a working play trigger.
 		$play_on = $this->get_attribute( 'playOn', 'auto' );
-		if ( 'auto' !== $play_on ) {
-			$content = str_replace( '<lottie-player', "<lottie-player {$play_on}", $this->content );
+		$play_on = $play_on ? $play_on : 'auto';
+
+		if ( 'auto' === $play_on ) {
+			// Self-heals markup saved before the autoplay attribute went missing.
+			if ( false === strpos( $content, ' autoplay' ) && false === strpos( $content, 'data-autoplay-delay' ) ) {
+				$content = str_replace( '<lottie-player', '<lottie-player autoplay', $content );
+			}
+		} else {
+			// Marker read by the frontend script, not lottie-player's native `hover` attribute.
+			$content = str_replace( '<lottie-player', "<lottie-player data-play-on=\"{$play_on}\"", $content );
 		}
+
 		return $content;
 	}
 }

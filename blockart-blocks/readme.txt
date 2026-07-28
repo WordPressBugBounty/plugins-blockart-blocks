@@ -1,10 +1,10 @@
 === BlockArt Blocks – Gutenberg Blocks, Page Builder Blocks ,WordPress Block Plugin, Sections & Template Library  ===
 Contributors: WPBlockArt
 Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
-Requires at least: 5.5
-Tested up to: 6.9
+Requires at least: 6.6
+Tested up to: 7.0.2
 Requires PHP: 7.4
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -252,6 +252,28 @@ BlockArt Library is a collection of Sections, Starter Packs, and Templates that 
 Please report security bugs found in the source code of the BlockArt Blocks plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/9e5fbf7d-b1bc-412a-bb90-cea5402a81ec). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Changelog ==
+= 2.4.0 - 28-07-2026 =
+* Added - Column count controls and toolbar Add Column button to Section block.
+* Added - Pagination support to Button block for use with Query Loop.
+* Added - Style tab controls (Background/Border) to Query Loop and Post Template blocks.
+* Added - Editor-preview parity notice to Lottie block panel.
+* Enhancement - Migrated all blocks to the latest block API version for better compatibility with the WordPress block editor.
+* Enhancement - General code quality, PHP 8.4 compatibility, and minor block display fixes across the plugin.
+* Enhancement - Lottie block playback functionality (Play On, hover, and delay triggers) to match frontend behavior.
+* Enhancement - Query Loop block functionality and reliability.
+* Fix - Section block's row appender inserting the wrong block instead of opening the block picker.
+* Fix - Column gap padding overflowing column width and breaking RTL layouts on frontend.
+* Fix - Border, background color and gradient controls breaking on malformed attribute data.
+* Fix - Double-escaped RichText attributes breaking imports from BlockArt Library.
+* Fix - FAQ block throwing a React error during render.
+* Fix - Image drag-ghost and stuck slider-track dragging in editor for Slider and Testimonial blocks.
+* Fix - Image Comparison block's upload placeholder not responding to clicks.
+* Fix - Google Maps script dependency notice when API key isn't set.
+* Fix - List view selected block icon color.
+* Fix - Fatal error in admin footer hooks when screen isn't set yet.
+* Fix - BlockArt admin submenu item staying permanently highlighted.
+* Fix - Section block's "View Templates" button not opening the library.
+
 = 2.3.0 - 02-04-2026 =
 * Added - Tooltip option in paragraph block.
 * Added - URL option in section block.

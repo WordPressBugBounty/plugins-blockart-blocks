@@ -1,5 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
     "name": "blockart/query-loop",
     "title": "Query Loop",
     "description": "Display posts listed according to various filters.",
@@ -91,7 +92,7 @@
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}} .single-post {padding: {{VALUE}}; }"
+                    "selector": "{{WRAPPER}} .wp-block-post {padding: {{VALUE}}; }"
                 }
             ]
         },
@@ -116,7 +117,7 @@
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}} .post-title"
+                    "selector": "{{WRAPPER}} .wp-block-post-title"
                 }
             ]
         },
@@ -133,7 +134,7 @@
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}} .post-date"
+                    "selector": "{{WRAPPER}} .wp-block-post-date"
                 }
             ]
         },
@@ -149,7 +150,7 @@
             },
             "style": [
                 {
-                    "selector": "{{WRAPPER}} .post-excerpt"
+                    "selector": "{{WRAPPER}} .wp-block-post-excerpt"
                 }
             ]
         },
@@ -493,6 +494,7 @@
     },
     "providesContext": {
         "blockart/queryId": "queryId",
+        "queryId": "queryId",
         "query": "query",
         "queryArgs": "queryArgs",
         "displayLayout": "displayLayout",
