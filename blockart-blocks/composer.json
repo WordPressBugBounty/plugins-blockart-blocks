@@ -2,7 +2,7 @@
   "name": "themegrill/blockart",
   "description": "Maketh thy website most wondrous.",
   "type": "wordpress-plugin",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "autoload": {
     "files": [
       "includes/Helpers/core.php",

@@ -256,6 +256,7 @@ class BlockStyles extends Styles {
 		}
 
 		$weight = (string) ( $value['weight'] ?? '400' );
+		$weight = 'default' === $weight ? '400' : $weight;
 		$family = $value['family'];
 
 		if ( ! isset( $this->fonts[ $family ] ) ) {
@@ -636,7 +637,7 @@ class BlockStyles extends Styles {
 			if ( 'default' !== strtolower( $family ) ) {
 				$css['desktop'][ $selector ]['font-family'] = $family;
 			}
-			if ( $weight ) {
+			if ( $weight && 'default' !== $weight ) {
 				$css['desktop'][ $selector ]['font-weight'] = $weight;
 			}
 			if ( 'default' !== strtolower( $transform ) ) {
@@ -981,6 +982,7 @@ class BlockStyles extends Styles {
 			'filename'   => $this->filename,
 			'fonts'      => $this->fonts,
 			'stylesheet' => $this->styles,
+			'version'    => BLOCKART_VERSION,
 		);
 
 		if ( is_int( $this->id ) ) {

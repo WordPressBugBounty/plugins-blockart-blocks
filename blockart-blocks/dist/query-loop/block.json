@@ -108,7 +108,6 @@
             "type": "object",
             "default": {
                 "typography": 1,
-                "weight": 500,
                 "size": {
                     "desktop": {
                         "value": 24
@@ -125,7 +124,6 @@
             "type": "object",
             "default": {
                 "typography": 1,
-                "weight": 100,
                 "size": {
                     "desktop": {
                         "value": 14

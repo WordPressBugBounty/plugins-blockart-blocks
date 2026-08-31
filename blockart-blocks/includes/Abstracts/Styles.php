@@ -84,9 +84,10 @@ abstract class Styles {
 	 * @return void
 	 */
 	protected function maybe_generate() {
-		$saved = $this->get_saved_styles();
+		$saved       = $this->get_saved_styles();
+		$is_outdated = blockart_array_get( $saved, 'version' ) !== BLOCKART_VERSION;
 
-		if ( ! $this->force_generate && ! empty( $saved ) && ! blockart_is_preview() ) {
+		if ( ! $this->force_generate && ! empty( $saved ) && ! $is_outdated && ! blockart_is_preview() ) {
 			$this->styles   = blockart_array_get( $saved, 'stylesheet', '' );
 			$this->filename = blockart_array_get( $saved, 'filename', '' );
 			$this->fonts    = blockart_array_get( $saved, 'fonts', array() );

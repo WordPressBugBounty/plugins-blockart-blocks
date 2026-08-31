@@ -48,7 +48,6 @@
     },
     "color": {
       "type": "string",
-      "default": "#000",
       "style": [
         {
           "selector": ".blockart-heading{{WRAPPER}} {color: {{VALUE}}; }"
@@ -96,6 +95,41 @@
     "size": {
       "type": "string"
     },
+    "fontSize": {
+      "type": "string",
+      "style": [
+        {
+          "condition": [
+            {
+              "key": "fontSize",
+              "relation": "==",
+              "value": "small"
+            }
+          ],
+          "selector": ".blockart-heading{{WRAPPER}} { font-size: 0.85em; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "fontSize",
+              "relation": "==",
+              "value": "medium"
+            }
+          ],
+          "selector": ".blockart-heading{{WRAPPER}} { font-size: 1em; }"
+        },
+        {
+          "condition": [
+            {
+              "key": "fontSize",
+              "relation": "==",
+              "value": "large"
+            }
+          ],
+          "selector": ".blockart-heading{{WRAPPER}} { font-size: 1.35em; }"
+        }
+      ]
+    },
     "width": {
       "type": "string",
       "default": "100%",
@@ -130,8 +164,7 @@
     "typography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 500
+        "typography": 1
       },
       "style": [
         {

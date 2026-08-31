@@ -207,7 +207,7 @@
     },
     "hoverColor1": {
       "type": "string",
-      "default": "",
+      "default": "#fff",
       "style": [
         {
           "condition": [

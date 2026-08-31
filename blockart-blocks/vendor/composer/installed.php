@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '2.4.0',
-        'version' => '2.4.0.0',
+        'pretty_version' => '2.4.1',
+        'version' => '2.4.1.0',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -50,8 +50,8 @@
             ),
         ),
         'themegrill/blockart' => array(
-            'pretty_version' => '2.4.0',
-            'version' => '2.4.0.0',
+            'pretty_version' => '2.4.1',
+            'version' => '2.4.1.0',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

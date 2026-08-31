@@ -137,8 +137,7 @@
     "headingTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {
@@ -149,8 +148,7 @@
     "designationTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {
@@ -161,8 +159,7 @@
     "textTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {

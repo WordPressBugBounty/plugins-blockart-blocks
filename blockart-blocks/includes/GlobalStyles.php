@@ -285,6 +285,7 @@ class GlobalStyles extends Styles {
 			'filename'   => $this->filename,
 			'fonts'      => $this->fonts,
 			'stylesheet' => $this->styles,
+			'version'    => BLOCKART_VERSION,
 		);
 
 		$saved = get_option( '_blockart_blocks_css', array() );

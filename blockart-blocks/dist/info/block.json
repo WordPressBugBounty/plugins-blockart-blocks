@@ -46,8 +46,7 @@
     "headingTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {
@@ -58,8 +57,7 @@
     "textTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {
@@ -70,8 +68,7 @@
     "buttonTypography": {
       "type": "object",
       "default": {
-        "typography": 1,
-        "weight": 400
+        "typography": 1
       },
       "style": [
         {

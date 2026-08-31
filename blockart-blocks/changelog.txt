@@ -1,4 +1,10 @@
 == Changelog ==
+= 2.4.1 - 31-08-2026 =
+* Fix - Heading block's Text Color no longer defaults to hardcoded black, so it correctly inherits the theme's heading color unless explicitly set.
+* Fix - Heading block's "Size" control replaced with a working Font Size control that scales text proportionally, while existing content's legacy spacing option is preserved.
+* Fix - BlockArt Library modal being clipped by the WordPress 7.1 admin bar.
+* Fix - Button block's Outline/Plain/Link styles showing invisible text when generated styles were out of date.
+
 = 2.4.0 - 28-07-2026 =
 * Added - Column count controls and toolbar Add Column button to Section block.
 * Added - Pagination support to Button block for use with Query Loop.

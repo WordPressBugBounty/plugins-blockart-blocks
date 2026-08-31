@@ -15,8 +15,6 @@ defined( 'ABSPATH' ) || exit;
  */
 class Slider extends AbstractBlock {
 
-
-
 	/**
 	 * Block name.
 	 *
@@ -27,7 +25,7 @@ class Slider extends AbstractBlock {
 	/**
 	 * Build html.
 	 *
-	 * @param string    $content Block content.
+	 * @param string $content Block content.
 	 * @return string
 	 */
 	public function build_html( $content ) {
@@ -88,7 +86,8 @@ class Slider extends AbstractBlock {
 					),
 				)
 			);
-			$content    = str_replace( 'class="splide"', $html_attrs, $content );
+
+			$content = str_replace( 'class="splide"', $html_attrs, $content );
 		}
 		return $content;
 	}

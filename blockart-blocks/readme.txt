@@ -4,7 +4,7 @@ Tags: gutenberg, gutenberg blocks, block editor, editor, page builder
 Requires at least: 6.6
 Tested up to: 7.0.2
 Requires PHP: 7.4
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -252,6 +252,12 @@ BlockArt Library is a collection of Sections, Starter Packs, and Templates that 
 Please report security bugs found in the source code of the BlockArt Blocks plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/9e5fbf7d-b1bc-412a-bb90-cea5402a81ec). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Changelog ==
+= 2.4.1 - 31-08-2026 =
+* Fix - Heading block's Text Color no longer defaults to hardcoded black, so it correctly inherits the theme's heading color unless explicitly set.
+* Fix - Heading block's "Size" control replaced with a working Font Size control that scales text proportionally, while existing content's legacy spacing option is preserved.
+* Fix - BlockArt Library modal being clipped by the WordPress 7.1 admin bar.
+* Fix - Button block's Outline/Plain/Link styles showing invisible text when generated styles were out of date.
+
 = 2.4.0 - 28-07-2026 =
 * Added - Column count controls and toolbar Add Column button to Section block.
 * Added - Pagination support to Button block for use with Query Loop.
